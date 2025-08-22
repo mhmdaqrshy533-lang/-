@@ -1,0 +1,2137 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عالم الأمن السيبراني | الخبير المحترف سهيل الهزبري</title>
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+<Style>
+	/* ===== المتغيرات العامة ===== */
+:root {
+    /* الألوان الأساسية */
+    --primary-dark: #0a0a1a;
+    --primary-light: #16213e;
+    --accent-blue: #00c2ff;
+    --accent-green: #00ff8c;
+    --accent-purple: #a742f5;
+    --accent-red: #ff2957;
+    --text-light: #ffffff;
+    --text-gray: #a0a0a0;
+    
+    /* الظلال والتأثيرات */
+    --neon-shadow: 0 0 10px rgba(0, 194, 255, 0.7), 0 0 20px rgba(0, 194, 255, 0.5), 0 0 30px rgba(0, 194, 255, 0.3);
+    --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    --hover-transition: all 0.3s ease-in-out;
+    
+    /* الخطوط */
+    --font-main: 'Cairo', sans-serif;
+}
+
+/* ===== إعدادات عامة ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+Img{
+      width: 90%;
+        Height: 70%;
+        border-radius: 50px;
+      }
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: #000000;
+    color: #00FF9E;
+    line-height: 1.6;
+    overflow-x: hidden;
+    direction: rtl;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-light);
+    transition: var(--hover-transition);
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    cursor: pointer;
+    font-family: var(--font-main);
+    border: none;
+    outline: none;
+    transition: var(--hover-transition);
+}
+
+section {
+    padding: 100px 0;
+    position: relative;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple));
+    border-radius: 2px;
+}
+
+.section-subtitle {
+    color: var(--text-gray);
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* ===== تأثير الجزيئات ===== */
+.particles-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+#particles-js {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+}
+
+/* ===== شريط التنقل ===== */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    z-index: 1000;
+    transition: var(--hover-transition);
+    background-color: rgba(10, 10, 26, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+.navbar.scrolled {
+    padding: 15px 5%;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.cyber-text {
+    color: var(--accent-blue);
+    text-shadow: var(--neon-shadow);
+}
+
+.security-text {
+    color: var(--text-light);
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li a {
+    font-size: 1rem;
+    font-weight: 500;
+    position: relative;
+    padding: 5px 0;
+}
+
+.nav-links li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple));
+    transition: var(--hover-transition);
+}
+
+.nav-links li a:hover::after,
+.nav-links li a.active::after {
+    width: 100%;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-light);
+    margin: 3px 0;
+    transition: var(--hover-transition);
+}
+
+/* ===== القسم الرئيسي ===== */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 150px 5% 100px;
+    background: radial-gradient(circle at center, var(--primary-light) 0%, var(--primary-dark) 70%);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="none"/><path d="M0,0 L100,100 M100,0 L0,100" stroke="rgba(255,255,255,0.03)" stroke-width="0.5"/></svg>');
+    opacity: 0.5;
+    z-index: 0;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 600px;
+    z-index: 1;
+}
+
+.glitch {
+    font-size: 3.5rem;
+    font-weight: 800;
+    position: relative;
+    color: var(--text-light);
+    letter-spacing: 2px;
+    animation: glitch 5s infinite;
+}
+
+.glitch::before,
+.glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+}
+
+.glitch::before {
+    color: var(--accent-blue);
+    z-index: -1;
+    animation: glitch-effect 3s infinite;
+}
+
+.glitch::after {
+    color: var(--accent-purple);
+    z-index: -2;
+    animation: glitch-effect 2s infinite reverse;
+}
+
+@keyframes glitch-effect {
+    0% {
+        transform: translate(0);
+    }
+    20% {
+        transform: translate(-3px, 3px);
+    }
+    40% {
+        transform: translate(-3px, -3px);
+    }
+    60% {
+        transform: translate(3px, 3px);
+    }
+    80% {
+        transform: translate(3px, -3px);
+    }
+    100% {
+        transform: translate(0);
+    }
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: var(--text-gray);
+    margin: 20px 0 40px;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.cta-primary,
+.cta-secondary {
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: var(--hover-transition);
+}
+
+.cta-primary {
+    background: linear-gradient(45deg, var(--accent-blue), var(--accent-purple));
+    color: var(--text-light);
+    box-shadow: 0 5px 15px rgba(0, 194, 255, 0.4);
+}
+
+.cta-primary:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 194, 255, 0.6);
+}
+
+.cta-secondary {
+    background: transparent;
+    color: var(--text-light);
+    border: 2px solid var(--accent-blue);
+    box-shadow: 0 0 10px rgba(0, 194, 255, 0.2);
+}
+
+.cta-secondary:hover {
+    background-color: rgba(0, 194, 255, 0.1);
+    box-shadow: 0 0 15px rgba(0, 194, 255, 0.4);
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.image-container {
+    position: relative;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+}
+
+.analyst-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: var(--hover-transition);
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 194, 255, 0.2), rgba(167, 66, 245, 0.2));
+    mix-blend-mode: overlay;
+}
+
+.floating-icons {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.icon-box {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(10, 10, 26, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 20px rgba(0, 194, 255, 0.5);
+    animation: float 6s infinite ease-in-out;
+}
+
+.icon-box:nth-child(1) {
+    top: 10%;
+    left: -25px;
+    animation-delay: 0s;
+}
+
+.icon-box:nth-child(2) {
+    top: 30%;
+    right: -25px;
+    animation-delay: 1s;
+}
+
+.icon-box:nth-child(3) {
+    bottom: 20%;
+    left: -25px;
+    animation-delay: 2s;
+}
+
+.icon-box:nth-child(4) {
+    bottom: 10%;
+    right: -25px;
+    animation-delay: 3s;
+}
+
+.icon-box:nth-child(5) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation-delay: 4s;
+}
+
+.icon-box i {
+    font-size: 1.5rem;
+    color: var(--accent-blue);
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+/* ===== قسم الخدمات ===== */
+.services {
+    background-color: var(--primary-light);
+    position: relative;
+    overflow: hidden;
+}
+
+.services::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="none"/><circle cx="50" cy="50" r="1" fill="rgba(255,255,255,0.05)"/></svg>');
+    opacity: 0.5;
+    z-index: 0;
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 0 5%;
+    position: relative;
+    z-index: 1;
+}
+
+.service-card {
+    background: linear-gradient(135deg, rgba(22, 33, 62, 0.8), rgba(10, 10, 26, 0.8));
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: var(--card-shadow);
+    transition: var(--hover-transition);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 80%);
+    opacity: 0;
+    transition: var(--hover-transition);
+    z-index: 0;
+}
+
+.service-card:hover::before {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+}
+
+.service-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, var(--accent-blue), var(--accent-purple));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.service-icon i {
+    font-size: 2rem;
+    color: var(--text-light);
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 1;
+}
+
+.service-card p {
+    color: var(--text-gray);
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.service-details {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.progress-container {
+    flex: 1;
+    height: 6px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    overflow: hidden;
+    margin-left: 10px;
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple));
+    border-radius: 3px;
+    width: 0;
+    transition: width 1.5s ease-in-out;
+}
+
+.percentage {
+    font-weight: 600;
+    color: var(--accent-blue);
+}
+
+.service-btn {
+    background: transparent;
+    color: var(--accent-blue);
+    border: 1px solid var(--accent-blue);
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: var(--hover-transition);
+    position: relative;
+    z-index: 1;
+}
+
+.service-btn:hover {
+    background-color: var(--accent-blue);
+    color: var(--primary-dark);
+}
+
+/* ===== قسم محاكاة الهجمات ===== */
+.attack-simulation {
+    background-color: var(--primary-dark);
+    position: relative;
+    overflow: hidden;
+}
+
+.simulation-container {
+    padding: 0 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.simulation-controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.sim-btn {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--text-gray);
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: var(--hover-transition);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sim-btn:hover,
+.sim-btn.active {
+    background: linear-gradient(45deg, var(--accent-blue), var(--accent-purple));
+    color: var(--text-light);
+    box-shadow: 0 5px 15px rgba(0, 194, 255, 0.3);
+}
+
+.simulation-display {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: center;
+}
+
+.attack-visualization {
+    background-color: rgba(10, 10, 26, 0.8);
+    border-radius: 10px;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.nodes-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.attack-info {
+    padding: 20px;
+    background: linear-gradient(135deg, rgba(22, 33, 62, 0.8), rgba(10, 10, 26, 0.8));
+    border-radius: 10px;
+    box-shadow: var(--card-shadow);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.attack-info h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: var(--accent-blue);
+}
+
+.attack-info p {
+    color: var(--text-gray);
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+.attack-stats {
+    display: flex;
+    justify-content: space-around;
+    margin: 30px 0;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--accent-blue);
+    display: block;
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    color: var(--text-gray);
+    font-size: 0.9rem;
+}
+
+.defense-btn {
+    background: linear-gradient(45deg, var(--accent-green), var(--accent-blue));
+    color: var(--primary-dark);
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    display: block;
+    margin: 0 auto;
+    transition: var(--hover-transition);
+}
+
+.defense-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 255, 140, 0.3);
+}
+
+/* ===== قسم الرسوم البيانية ===== */
+.stats {
+    background-color: var(--primary-light);
+    position: relative;
+    overflow: hidden;
+}
+
+.charts-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 30px;
+    padding: 0 5%;
+}
+
+.chart-card {
+    background: linear-gradient(135deg, rgba(22, 33, 62, 0.8), rgba(10, 10, 26, 0.8));
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: var(--card-shadow);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.chart-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: var(--text-light);
+}
+
+.chart-container {
+    height: 300px;
+    position: relative;
+}
+
+/* ===== قسم اختبار الأمان ===== */
+.security-test {
+    background-color: var(--primary-dark);
+    position: relative;
+    overflow: hidden;
+}
+
+.test-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, rgba(22, 33, 62, 0.8), rgba(10, 10, 26, 0.8));
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: var(--card-shadow);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.test-progress {
+    margin-bottom: 30px;
+}
+
+.progress-bar {
+    height: 6px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.progress-fill {
+    height: 100%;
+    width: 20%;
+    background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple));
+    border-radius: 3px;
+    transition: width 0.5s ease-in-out;
+}
+
+.progress-text {
+    font-size: 0.9rem;
+    color: var(--text-gray);
+}
+
+.question-container {
+    display: none;
+}
+
+.question-container.active {
+    display: block;
+}
+
+.question-container h3 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: var(--hover-transition);
+}
+
+.option:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.option input {
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.option-text {
+    font-size: 1rem;
+}
+
+.test-controls {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.test-btn {
+    background: linear-gradient(45deg, var(--accent-blue), var(--accent-purple));
+    color: var(--text-light);
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: var(--hover-transition);
+}
+
+.test-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 194, 255, 0.3);
+}
+
+.test-results {
+    text-align: center;
+}
+
+.test-results h3 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+}
+
+.score-container {
+    margin: 30px 0;
+}
+
+.score-circle {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+}
+
+.score-svg {
+    width: 100%;
+    height: 100%;
+}
+
+.score-bg {
+    fill: none;
+    stroke: rgba(255, 255, 255, 0.1);
+    stroke-width: 3;
+}
+
+.score-fill {
+    fill: none;
+    stroke: url(#scoreGradient);
+    stroke-width: 3;
+    stroke-linecap: round;
+    transform: rotate(-90deg);
+    transform-origin: center;
+    transition: stroke-dasharray 1s ease-in-out;
+}
+
+.score-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    fill: var(--text-light);
+    text-anchor: middle;
+}
+
+.recommendations {
+    text-align: right;
+    margin-top: 30px;
+}
+
+.recommendations h4 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: var(--accent-blue);
+}
+
+.recommendations ul {
+    list-style-type: disc;
+    padding-right: 20px;
+}
+
+.recommendations li {
+    margin-bottom: 10px;
+    color: var(--text-gray);
+}
+
+/* ===== قسم المشاريع ===== */
+.projects {
+    background-color: var(--primary-light);
+    position: relative;
+    overflow: hidden;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    padding: 0 5%;
+}
+
+.project-card {
+    background: linear-gradient(135deg, rgba(22, 33, 62, 0.8), rgba(10, 10, 26, 0.8));
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    transition: var(--hover-transition);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+}
+
+.project-image {
+    position: relative;
+    overflow: hidden;
+    height: 200px;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--hover-transition);
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.1);
+}
+
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(10, 10, 26, 0.9), transparent);
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+    opacity: 0;
+    transition: var(--hover-transition);
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.project-tech span {
+    background-color: rgba(0, 194, 255, 0.2);
+    color: var(--accent-blue);
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.project-info {
+    padding: 20px;
+}
+
+.project-info h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.project-info p {
+    color: var(--text-gray);
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+.project-links {
+    display: flex;
+    gap: 15px;
+}
+
+.project-link {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--text-light);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    transition: var(--hover-transition);
+}
+
+.project-link:hover {
+    background-color: var(--accent-blue);
+    color: var(--primary-dark);
+}
+
+/* ===== قسم الاتصال ===== */
+.contact {
+    background-color: var(--primary-dark);
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 50px;
+    padding: 0 5%;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.info-item i {
+    font-size: 1.5rem;
+    color: var(--accent-blue);
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 194, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.info-item p {
+    color: var(--text-gray);
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-link {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.05);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--hover-transition);
+}
+
+.social-link i {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    transition: var(--hover-transition);
+}
+
+.social-link:hover {
+    background-color: var(--accent-blue);
+    transform: translateY(-5px);
+}
+
+.social-link:hover i {
+    color: var(--primary-dark);
+}
+
+.contact-form {
+    background: linear-gradient(135deg, rgba(22, 33, 62, 0.8), rgba(10, 10, 26, 0.8));
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: var(--card-shadow);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.form-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: none;
+    border-radius: 5px;
+    color: var(--text-light);
+    font-family: var(--font-main);
+    font-size: 1rem;
+    transition: var(--hover-transition);
+}
+
+.form-group textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.input-focus-effect {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple));
+    transition: var(--hover-transition);
+}
+
+.form-group input:focus ~ .input-focus-effect,
+.form-group textarea:focus ~ .input-focus-effect {
+    width: 100%;
+}
+
+.submit-btn {
+    background: linear-gradient(45deg, var(--accent-blue), var(--accent-purple));
+    color: var(--text-light);
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    width: 100%;
+    transition: var(--hover-transition);
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 194, 255, 0.3);
+}
+
+/* ===== التذييل ===== */
+.footer {
+    background-color: var(--primary-light);
+    padding: 80px 5% 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="none"/><circle cx="50" cy="50" r="1" fill="rgba(255,255,255,0.05)"/></svg>');
+    opacity: 0.5;
+    z-index: 0;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 50px;
+    margin-bottom: 50px;
+    position: relative;
+    z-index: 1;
+}
+
+.footer-logo {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.footer-logo p {
+    font-size: 1rem;
+    color: var(--text-gray);
+    margin-top: 10px;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.footer-column h3 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+.footer-column h3::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple));
+    border-radius: 1.5px;
+}
+
+.footer-column ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-column ul li a {
+    color: var(--text-gray);
+    font-size: 0.95rem;
+    transition: var(--hover-transition);
+}
+
+.footer-column ul li a:hover {
+    color: var(--accent-blue);
+    transform: translateX(-5px);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    position: relative;
+    z-index: 1;
+}
+
+.footer-bottom p {
+    color: var(--text-gray);
+    font-size: 0.9rem;
+}
+
+.credits {
+    margin-top: 10px;
+    font-size: 0.8rem;
+}
+
+.credits a {
+    color: var(--accent-blue);
+}
+
+.credits a:hover {
+    text-decoration: underline;
+}
+
+/* ===== النافذة المنبثقة ===== */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 2000;
+    overflow-y: auto;
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background: linear-gradient(135deg, rgba(22, 33, 62, 0.95), rgba(10, 10, 26, 0.95));
+    border-radius: 10px;
+    max-width: 800px;
+    width: 90%;
+    margin: 50px auto;
+    padding: 30px;
+    box-shadow: var(--card-shadow);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    position: relative;
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 1.5rem;
+    color: var(--text-gray);
+    cursor: pointer;
+    transition: var(--hover-transition);
+}
+
+.close-modal:hover {
+    color: var(--accent-red);
+}
+
+#modal-title {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: var(--accent-blue);
+}
+
+/* ===== التنبيهات ===== */
+.notification {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    background: linear-gradient(135deg, rgba(22, 33, 62, 0.9), rgba(10, 10, 26, 0.9));
+    border-radius: 10px;
+    padding: 15px 25px;
+    box-shadow: var(--card-shadow);
+    border-right: 4px solid var(--accent-blue);
+    transform: translateY(150%);
+    transition: transform 0.5s ease-in-out;
+    z-index: 1500;
+    backdrop-filter: blur(10px);
+    max-width: 350px;
+}
+
+.notification.show {
+    transform: translateY(0);
+}
+
+.notification-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.notification-icon {
+    font-size: 1.5rem;
+    color: var(--accent-blue);
+}
+
+.notification-message {
+    color: var(--text-light);
+    font-size: 0.95rem;
+}
+
+/* ===== التجاوب مع الشاشات المختلفة ===== */
+@media (max-width: 1200px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 50px;
+    }
+    
+    .hero-content {
+        max-width: 100%;
+    }
+    
+    .cta-buttons {
+        justify-content: center;
+    }
+    
+    .simulation-display {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 900px) {
+    .menu-toggle {
+        display: flex;
+    }
+    
+    .nav-links {
+        position: fixed;
+        top: 80px;
+        right: -100%;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background-color: var(--primary-dark);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: var(--hover-transition);
+        z-index: 999;
+    }
+    
+    .nav-links.active {
+        right: 0;
+    }
+    
+    .charts-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-links {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .glitch {
+        font-size: 2.5rem;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .services-container,
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-links {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+}
+</Style>
+</head>
+<body>
+    <Center><img src="https://via.placeholder.com/150/00FF9E/000000?text=CyberSecurity+Logo" alt="شعار الأمن السيبراني"></center>
+    <marquee><h1>حمايتك هدفنا</h1></marquee>
+    
+    <div class="particles-container">
+        <div id="particles-js"></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="logo">
+            <span class="cyber-text">CYBER</span><span class="security-text">SECURITY</span>
+        </div>
+        <div class="menu-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home" class="active">الرئيسية</a></li>
+            <li><a href="#services">خدماتنا</a></li>
+            <li><a href="#about">من نحن</a></li>
+            <li><a href="#projects">مشاريعنا</a></li>
+            <li><a href="#contact">اتصل بنا</a></li>
+        </ul>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="glitch" data-text="خبير الأمن السيبراني سهيل الهزبري">خبير الأمن السيبراني سهيل الهزبري</h1>
+            <p class="subtitle">حماية الأنظمة والشبكات من التهديدات الرقمية</p>
+            <div class="cta-buttons">
+                <button class="cta-primary">تواصل معنا</button>
+                <a href=""><button class="cta-secondary"> إربح من الإنترنت</button>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="image-container">
+                <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="خبير أمن سيبراني" class="analyst-image">
+                <div class="image-overlay"></div>
+            </div>
+            <div class="floating-icons">
+                <div class="icon-box"><i class="fas fa-shield-alt"></i></div>
+                <div class="icon-box"><i class="fas fa-lock"></i></div>
+                <div class="icon-box"><i class="fas fa-user-secret"></i></div>
+                <div class="icon-box"><i class="fas fa-server"></i></div>
+                <div class="icon-box"><i class="fas fa-code"></i></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="section-header">
+            <h2 class="section-title">من نحن</h2>
+            <p class="section-subtitle">نحن متخصصون في تقديم أفضل خدمات الأمن السيبراني لحماية الشركات والأفراد من التهديدات الإلكترونية. أسعى من خلال هذه الصفحة إلى نشر الأمن والتقدم والتقنية للأفراد والمجتمع.</p>
+        </div>
+        </section>
+
+    <section id="services" class="services">
+        <div class="section-header">
+            <h2 class="section-title">خدماتنا المتخصصة</h2>
+            <p class="section-subtitle">نقدم مجموعة متكاملة من خدمات الأمن السيبراني لحماية أعمالك</p>
+        </div>
+        <div class="services-container">
+            <div class="service-card" data-service="penetration">
+                <div class="service-icon">
+                    <i class="fas fa-user-shield"></i>
+                </div>
+                <h3>اختبار الاختراق والتقييم الأمني</h3>
+                <p>نقوم بإجراء اختبارات اختراق شاملة لتقييم مدى قوة دفاعاتك وتحديد الثغرات الأمنية المحتملة قبل أن يستغلها المهاجمون.</p>
+                <div class="service-details">
+                    <span class="percentage">95%</span>
+                    <div class="progress-container"><div class="progress-bar" style="width: 95%;"></div></div>
+                </div>
+                <button class="service-btn">تعرف أكثر</button>
+            </div>
+            
+            <div class="service-card" data-service="vulnerability">
+                <div class="service-icon">
+                    <i class="fas fa-network-wired"></i>
+                </div>
+                <h3>تحليل الثغرات وتأمين الشبكات</h3>
+                <p>نقدم حلولًا متقدمة لتحليل الثغرات الأمنية وتأمين البنية التحتية لشبكتك ضد الهجمات المتطورة، لضمان استمرارية عملك بأمان.</p>
+                <div class="service-details">
+                    <span class="percentage">90%</span>
+                    <div class="progress-container"><div class="progress-bar" style="width: 90%;"></div></div>
+                </div>
+                <button class="service-btn">تعرف أكثر</button>
+            </div>
+
+            <div class="service-card" data-service="custom-solutions">
+                <div class="service-icon">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <h3>تطوير حلول الحماية المخصصة</h3>
+                <p>نصمم ونطور حلولًا أمنية مخصصة تتناسب مع احتياجات عملك الفريدة، لتقديم أقصى درجات الحماية ضد التهديدات المتغيرة.</p>
+                <div class="service-details">
+                    <span class="percentage">98%</span>
+                    <div class="progress-container"><div class="progress-bar" style="width: 98%;"></div></div>
+                </div>
+                <button class="service-btn">تعرف أكثر</button>
+            </div>
+
+            <div class="service-card" data-service="training">
+                <div class="service-icon">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                </div>
+                <h3>التدريب والتوعية الأمنية</h3>
+                <p>نقدم برامج تدريب وتوعية متخصصة لرفع مستوى الوعي الأمني لدى موظفيك، وتقليل مخاطر الهجمات التي تستهدف العنصر البشري.</p>
+                <div class="service-details">
+                    <span class="percentage">85%</span>
+                    <div class="progress-container"><div class="progress-bar" style="width: 85%;"></div></div>
+                </div>
+                <button class="service-btn">تعرف أكثر</button>
+            </div>
+
+            <div class="service-card" data-service="malware-analysis">
+                <div class="service-icon">
+                    <i class="fas fa-bug"></i>
+                </div>
+                <h3>تحليل البرمجيات الخبيثة</h3>
+                <p>نقوم بتحليل معمق للبرمجيات الخبيثة لفهم آليات عملها وتطوير استراتيجيات فعالة لمكافحتها وحماية أنظمتك منها.</p>
+                <div class="service-details">
+                    <span class="percentage">92%</span>
+                    <div class="progress-container"><div class="progress-bar" style="width: 92%;"></div></div>
+                </div>
+                <button class="service-btn">تعرف أكثر</button>
+            </div>
+
+            <div class="service-card" data-service="encryption">
+                <div class="service-icon">
+                    <i class="fas fa-lock"></i>
+                </div>
+                <h3>تشفير الشبكات</h3>
+                <p>نقدم حلول تشفير متقدمة لبياناتك وشبكاتك، لضمان سرية وسلامة معلوماتك الحساسة وحمايتها من الوصول غير المصرح به.</p>
+                <div class="service-details">
+                    <span class="percentage">97%</span>
+                    <div class="progress-container"><div class="progress-bar" style="width: 97%;"></div></div>
+                </div>
+                <button class="service-btn">تعرف أكثر</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="attack-simulation" class="attack-simulation">
+        <div class="section-header">
+            <h2 class="section-title">محاكاة الهجمات المتقدمة</h2>
+            <p class="section-subtitle">شاهد كيف يمكننا محاكاة الهجمات الحقيقية لاختبار دفاعاتك وتحسينها.</p>
+        </div>
+        <div class="simulation-container">
+            <div class="simulation-controls">
+                <button class="sim-btn active" data-attack="phishing">هجوم التصيد</button>
+                <button class="sim-btn" data-attack="ddos">هجوم حجب الخدمة (DDoS)</button>
+                <button class="sim-btn" data-attack="ransomware">برامج الفدية</button>
+            </div>
+            <div class="simulation-display">
+                <div class="attack-visualization">
+                    <img src="https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Attack Visualization" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="attack-info">
+                    <h3>هجوم التصيد الاحتيالي</h3>
+                    <p>يحاكي هذا الهجوم محاولات سرقة المعلومات الحساسة عن طريق انتحال هوية جهات موثوقة. نوضح كيفية اكتشاف هذه الهجمات ومنعها.</p>
+                    <div class="attack-stats">
+                        <div class="stat">
+                            <span class="stat-value">92%</span>
+                            <span class="stat-label">نسبة الكشف</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value">3 ثوانٍ</span>
+                            <span class="stat-label">متوسط وقت الاستجابة</span>
+                        </div>
+                    </div>
+                    <button class="defense-btn">تعلم الدفاع</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="stats" class="stats">
+        <div class="section-header">
+            <h2 class="section-title">إحصائيات وتحليلات الأمن السيبراني</h2>
+            <p class="section-subtitle">نقدم نظرة شاملة على التهديدات الشائعة ومستويات الحماية.</p>
+        </div>
+        <div class="charts-container">
+            <div class="chart-card">
+                <h3>أنواع الهجمات الشائعة</h3>
+                <div class="chart-container">
+                    <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc1c25?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Attack Types Chart" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+            </div>
+            <div class="chart-card">
+                <h3>فعالية الاستجابة الأمنية</h3>
+                <div class="chart-container">
+                    <img src="https://images.unsplash.com/photo-1544837563-718255b6a70e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Security Response Chart" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="section-header">
+            <h2 class="section-title">مشاريعنا البارزة</h2>
+            <p class="section-subtitle">بعض من أعمالنا التي تظهر خبرتنا في الأمن السيبراني.</p>
+        </div>
+        <div class="projects-container">
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1620712948622-c36190a42f63?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="مشروع تأمين البنية التحتية">
+                    <div class="project-overlay">
+                        <div class="project-tech">
+                            <span>شبكات</span>
+                            <span>خوادم</span>
+                            <span>جدران حماية</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>تأمين البنية التحتية لشركة كبرى</h3>
+                    <p>مشروع متكامل لتأمين البنية التحتية الشبكية لشركة اتصالات رائدة، تضمن تطبيق أحدث معايير الأمان.</p>
+                    <div class="project-links">
+                        <a href="#" class="project-link">عرض التفاصيل</a>
+                        <a href="#" class="project-link">المزيد</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1581093589326-7243c2c1a84f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="تطوير نظام كشف التهديدات">
+                    <div class="project-overlay">
+                        <div class="project-tech">
+                            <span>ذكاء اصطناعي</span>
+                            <span>تعلم آلة</span>
+                            <span>أمن التطبيقات</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>تطوير نظام كشف التهديدات بالذكاء الاصطناعي</h3>
+                    <p>بناء نظام ذكي يعتمد على الذكاء الاصطناعي لكشف التهديدات السيبرانية بشكل استباقي وفعال.</p>
+                    <div class="project-links">
+                        <a href="#" class="project-link">عرض التفاصيل</a>
+                        <a href="#" class="project-link">المزيد</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="برنامج تدريب الوعي الأمني">
+                    <div class="project-overlay">
+                        <div class="project-tech">
+                            <span>تدريب</span>
+                            <span>توعية</span>
+                            <span>سياسات أمنية</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>برنامج تدريب وتوعية أمنية للموظفين</h3>
+                    <p>تنفيذ برنامج تدريبي شامل لزيادة وعي الموظفين بالمخاطر السيبرانية وأفضل الممارسات الأمنية.</p>
+                    <div class="project-links">
+                        <a href="#" class="project-link">عرض التفاصيل</a>
+                        <a href="#" class="project-link">المزيد</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="section-header">
+            <h2 class="section-title">تواصل معنا</h2>
+            <p class="section-subtitle">لا تتردد في الاتصال بنا لأي استفسارات أو لطلب خدماتنا.</p>
+        </div>
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h3>البريد الإلكتروني</h3>
+                        <p>bythontechnology@gmail.com</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <h3>الهاتف</h3>
+                        <p>+967 711 133 846</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h3>العنوان</h3>
+                        <p>قرية قيد، عزلة بني سري، شرعب السلام، اليمن</p>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="#" class="social-link" aria-label="فيسبوك"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link" aria-label="تويتر"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link" aria-label="لينكد إن"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-link" aria-label="واتساب"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="contact-form">
+                <h3>أرسل لنا رسالة</h3>
+                <form>
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="اسمك الكامل" required>
+                        <span class="input-focus-effect"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="بريدك الإلكتروني" required>
+                        <span class="input-focus-effect"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" placeholder="الموضوع" required>
+                        <span class="input-focus-effect"></span>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" placeholder="رسالتك" required></textarea>
+                        <span class="input-focus-effect"></span>
+                    </div>
+                    <button type="submit" class="submit-btn">إرسال الرسالة</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-col-about">
+                <div class="footer-logo">
+                    <span class="cyber-text">CYBER</span><span class="security-text">SECURITY</span>
+                    <p>خبير الأمن السيبراني سهيل الهزبري - حماية رقمية متكاملة.</p>
+                </div>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="#home">الرئيسية</a></li>
+                        <li><a href="#services">خدماتنا</a></li>
+                        <li><a href="#about">من نحن</a></li>
+                        <li><a href="#projects">مشاريعنا</a></li>
+                        <li><a href="#contact">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>خدماتنا</h3>
+                    <ul>
+                        <li><a href="#">اختبار الاختراق</a></li>
+                        <li><a href="#">تأمين الشبكات</a></li>
+                        <li><a href="#">حلول مخصصة</a></li>
+                        <li><a href="#">توعية أمنية</a></li>
+                        <li><a href="#">تحليل برمجيات خبيثة</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>تابعنا</h3>
+                    <ul class="social-links-footer">
+                        <li><a href="#"><i class="fab fa-facebook-f"></i> فيسبوك</a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i> تويتر</a></li>
+                        <li><a href="#"><i class="fab fa-linkedin-in"></i> لينكد إن</a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i> انستجرام</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 الخبير المحترف سهيل الهزبري. جميع الحقوق محفوظة.</p>
+            <p class="credits">تصميم وتطوير بواسطة <a href="#">سهيل الهزبري</a></p>
+        </div>
+    </footer>
+
+    <div id="serviceModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3 id="modal-title">تفاصيل الخدمة</h3>
+            <div id="modal-body">
+                </div>
+        </div>
+    </div>
+
+    <div id="notification" class="notification">
+        <div class="notification-content">
+            <i class="fas fa-bell notification-icon"></i>
+            <span class="notification-message"></span>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        // particles.js configuration
+        particlesJS("particles-js", {
+            "particles": {
+                "number": {
+                    "value": 80,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#00c2ff"
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    },
+                    "polygon": {
+                        "nb_sides": 5
+                    },
+                    "image": {
+                        "src": "img/github.svg",
+                        "width": 100,
+                        "height": 100
+                    }
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": false,
+                    "anim": {
+                        "enable": false,
+                        "speed": 1,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 3,
+                    "random": true,
+                    "anim": {
+                        "enable": false,
+                        "speed": 40,
+                        "size_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#a742f5",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 3,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": {
+                        "enable": false,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                    }
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "grab"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 140,
+                        "line_linked": {
+                            "opacity": 1
+                        }
+                    },
+                    "bubble": {
+                        "distance": 400,
+                        "size": 40,
+                        "duration": 2,
+                        "opacity": 8,
+                        "speed": 3
+                    },
+                    "repulse": {
+                        "distance": 200,
+                        "duration": 0.4
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    },
+                    "remove": {
+                        "particles_nb": 2
+                    }
+                }
+            },
+            "retina_detect": true
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                // Close mobile menu if open
+                if (document.querySelector('.nav-links').classList.contains('active')) {
+                    document.querySelector('.nav-links').classList.remove('active');
+                    document.querySelector('.menu-toggle').classList.remove('active');
+                }
+            });
+        });
+
+        // Mobile menu toggle
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+            this.classList.toggle('active');
+        });
+
+        // Highlight active nav link on scroll
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-links li a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= sectionTop - sectionHeight / 3) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Service card progress bar animation on scroll
+        const serviceCards = document.querySelectorAll('.service-card');
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.5 // Trigger when 50% of the element is visible
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const progressBar = entry.target.querySelector('.progress-bar');
+                    const percentage = entry.target.querySelector('.percentage').innerText;
+                    progressBar.style.width = percentage;
+                    observer.unobserve(entry.target); // Stop observing once animated
+                }
+            });
+        }, observerOptions);
+
+        serviceCards.forEach(card => {
+            observer.observe(card);
+        });
+
+        // Attack simulation buttons (basic example)
+        const simButtons = document.querySelectorAll('.sim-btn');
+        const attackTitle = document.querySelector('.attack-info h3');
+        const attackDescription = document.querySelector('.attack-info p');
+        const attackVizImage = document.querySelector('.attack-visualization img');
+
+        const attackData = {
+            phishing: {
+                title: "هجوم التصيد الاحتيالي",
+                description: "يحاكي هذا الهجوم محاولات سرقة المعلومات الحساسة عن طريق انتحال هوية جهات موثوقة. نوضح كيفية اكتشاف هذه الهجمات ومنعها.",
+                image: "https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80"
+            },
+            ddos: {
+                title: "هجوم حجب الخدمة (DDoS)",
+                description: "محاكاة هجمات تهدف إلى إغراق الخوادم والشبكات بالطلبات لتعطيل الخدمات. نعرض تقنيات التخفيف والحماية.",
+                image: "https://images.unsplash.com/photo-1579567990595-5d51ac544521?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80"
+            },
+            ransomware: {
+                title: "برامج الفدية",
+                description: "نموذج لهجوم ببرامج الفدية التي تشفر بياناتك وتطلب فدية. نوضح طرق الوقاية والاسترداد الآمن للبيانات.",
+                image: "https://images.unsplash.com/photo-1620712948622-c36190a42f63?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80"
+            }
+        };
+
+        simButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                simButtons.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+
+                const attackType = this.dataset.attack;
+                attackTitle.innerText = attackData[attackType].title;
+                attackDescription.innerText = attackData[attackType].description;
+                attackVizImage.src = attackData[attackType].image;
+            });
+        });
+
+        // Basic modal functionality (for service details)
+        const serviceModal = document.getElementById('serviceModal');
+        const closeModal = document.querySelector('.close-modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalBody = document.getElementById('modal-body');
+
+        const serviceDescriptions = {
+            'penetration': {
+                title: 'تفاصيل خدمة اختبار الاختراق',
+                content: '<p>في خدمة اختبار الاختراق، نقوم بمحاكاة هجمات حقيقية على أنظمتك وشبكاتك وتطبيقاتك للكشف عن الثغرات الأمنية المحتملة. نستخدم أحدث الأدوات والتقنيات لتحديد نقاط الضعف وتقديم تقارير مفصلة مع توصيات قابلة للتنفيذ لتحسين أمانك.</p><ul><li>تقييم شامل للبنية التحتية</li><li>اختبار اختراق تطبيقات الويب والجوال</li><li>اختبار اختراق الشبكات اللاسلكية</li><li>تقارير مفصلة وتوصيات عملية</li></ul>'
+            },
+            'vulnerability': {
+                title: 'تفاصيل خدمة تحليل الثغرات وتأمين الشبكات',
+                content: '<p>تتضمن هذه الخدمة مسحًا وتحليلاً شاملاً لثغرات نظامك وشبكتك لتحديد نقاط الضعف. بعد ذلك، نعمل على تنفيذ إجراءات أمنية قوية مثل إعدادات جدران الحماية، وأنظمة كشف التسلل (IDS/IPS)، وتقسيم الشبكة لتقوية دفاعاتك ومنع الوصول غير المصرح به.</p><ul><li>مسح دوري للثغرات</li><li>تأمين جدران الحماية</li><li>إعدادات أنظمة كشف التسلل</li><li>تقسيم الشبكة وتقوية نقاط الوصول</li></ul>'
+            },
+            'custom-solutions': {
+                title: 'تفاصيل تطوير حلول الحماية المخصصة',
+                content: '<p>نفهم أن لكل عمل احتياجات أمنية فريدة. لذلك، نقدم حلول حماية سيبرانية مصممة خصيصًا لتناسب متطلباتك الخاصة، سواء كان ذلك تطوير برامج أمنية داخلية، أو دمج أنظمة أمنية معقدة، أو تصميم استراتيجيات دفاعية مبتكرة.</p><ul><li>تطوير برامج أمنية مخصصة</li><li>دمج أنظمة الأمن المعقدة</li><li>تصميم استراتيجيات دفاعية مبتكرة</li><li>استشارات أمنية متقدمة</li></ul>'
+            },
+            'training': {
+                title: 'تفاصيل التدريب والتوعية الأمنية',
+                content: '<p>يعتبر العنصر البشري الحلقة الأضعف في سلسلة الأمن السيبراني. برامجنا التدريبية والتوعوية مصممة لتمكين موظفيك بالمعرفة والمهارات اللازمة للتعرف على التهديدات الشائعة مثل التصيد الاحتيالي، الهندسة الاجتماعية، وممارسات الأمان الجيدة لتصبحوا خط الدفاع الأول.</p><ul><li>ورش عمل تفاعلية</li><li>تدريب على اكتشاف هجمات التصيد</li><li>أفضل ممارسات أمان البيانات</li><li>توعية بسياسات الأمن المؤسسي</li></ul>'
+            },
+             'malware-analysis': {
+                title: 'تفاصيل تحليل البرمجيات الخبيثة',
+                content: '<p>في هذه الخدمة، نقوم بإجراء تحليل معمق للبرمجيات الخبيثة (مثل الفيروسات، برامج الفدية، وأحصنة طروادة) لفهم آليات عملها، طرق انتشارها، والأضرار التي يمكن أن تسببها. هذا التحليل يساعدنا في تطوير توقيعات كشف فعالة واستراتيجيات إزالة متخصصة لحماية أنظمتك.</p><ul><li>تحليل سلوكي وثابت للبرمجيات الخبيثة</li><li>استخراج التوقيعات والعلامات المميزة</li><li>تطوير أدوات إزالة مخصصة</li><li>إعداد تقارير مفصلة عن التهديدات</li></ul>'
+            },
+            'encryption': {
+                title: 'تفاصيل تشفير الشبكات',
+                content: '<p>يعد تشفير الشبكة أمرًا حيويًا لحماية البيانات أثناء النقل. نقدم حلول تشفير قوية لشبكاتك السلكية واللاسلكية، مما يضمن أن بياناتك الحساسة تظل سرية ومحمية من التنصت والوصول غير المصرح به. نطبق بروتوكولات تشفير رائدة لضمان أعلى مستوى من الأمان.</p><ul><li>تشفير البيانات أثناء النقل (VPN, SSL/TLS)</li><li>تشفير البيانات المخزنة (Encryption at Rest)</li><li>إدارة المفاتيح الأمنية</li><li>تأمين الاتصالات اللاسلكية</li></ul>'
+            }
+        };
+
+        document.querySelectorAll('.service-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const serviceType = this.closest('.service-card').dataset.service;
+                const details = serviceDescriptions[serviceType];
+                if (details) {
+                    modalTitle.innerText = details.title;
+                    modalBody.innerHTML = details.content;
+                    serviceModal.style.display = 'block';
+                }
+            });
+        });
+
+        closeModal.addEventListener('click', function() {
+            serviceModal.style.display = 'none';
+        });
+
+        window.addEventListener('click', function(event) {
+            if (event.target == serviceModal) {
+                serviceModal.style.display = 'none';
+            }
+        });
+
+        // Simple notification display
+        function showNotification(message) {
+            const notification = document.getElementById('notification');
+            const notificationMessage = notification.querySelector('.notification-message');
+            notificationMessage.innerText = message;
+            notification.classList.add('show');
+            setTimeout(() => {
+                notification.classList.remove('show');
+            }, 3000); // Hide after 3 seconds
+        }
+
+        // Example: show a welcome notification on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            showNotification('مرحباً بك في عالم الأمن السيبراني مع الخبير سهيل الهزبري!');
+        });
+
+    </script>
+</body>
+</html>
