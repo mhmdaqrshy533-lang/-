@@ -2,2136 +2,1448 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>عالم الأمن السيبراني | الخبير المحترف سهيل الهزبري</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
-<Style>
-	/* ===== المتغيرات العامة ===== */
-:root {
-    /* الألوان الأساسية */
-    --primary-dark: #0a0a1a;
-    --primary-light: #16213e;
-    --accent-blue: #00c2ff;
-    --accent-green: #00ff8c;
-    --accent-purple: #a742f5;
-    --accent-red: #ff2957;
-    --text-light: #ffffff;
-    --text-gray: #a0a0a0;
+    <!-- ==================== سيطرة مطلقة على SEO ==================== -->
     
-    /* الظلال والتأثيرات */
-    --neon-shadow: 0 0 10px rgba(0, 194, 255, 0.7), 0 0 20px rgba(0, 194, 255, 0.5), 0 0 30px rgba(0, 194, 255, 0.3);
-    --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    --hover-transition: all 0.3s ease-in-out;
+    <!-- العنوان الأساسي (العنوان الأقوى في SEO) -->
+    <title>المنارة السيبرانية العربية | مرجع الردع والأمن الرقمي في الوطن العربي</title>
     
-    /* الخطوط */
-    --font-main: 'Cairo', sans-serif;
-}
-
-/* ===== إعدادات عامة ===== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-Img{
-      width: 90%;
-        Height: 70%;
-        border-radius: 50px;
-      }
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: var(--font-main);
-    background-color: #000000;
-    color: #00FF9E;
-    line-height: 1.6;
-    overflow-x: hidden;
-    direction: rtl;
-}
-
-a {
-    text-decoration: none;
-    color: var(--text-light);
-    transition: var(--hover-transition);
-}
-
-ul {
-    list-style: none;
-}
-
-button {
-    cursor: pointer;
-    font-family: var(--font-main);
-    border: none;
-    outline: none;
-    transition: var(--hover-transition);
-}
-
-section {
-    padding: 100px 0;
-    position: relative;
-}
-
-.section-header {
-    text-align: center;
-    margin-bottom: 60px;
-}
-
-.section-title {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
-    position: relative;
-    display: inline-block;
-}
-
-.section-title::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 4px;
-    background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple));
-    border-radius: 2px;
-}
-
-.section-subtitle {
-    color: var(--text-gray);
-    font-size: 1.1rem;
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-/* ===== تأثير الجزيئات ===== */
-.particles-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    overflow: hidden;
-}
-
-#particles-js {
-    width: 100%;
-    height: 100%;
-    background-color: transparent;
-}
-
-/* ===== شريط التنقل ===== */
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 5%;
-    z-index: 1000;
-    transition: var(--hover-transition);
-    background-color: rgba(10, 10, 26, 0.8);
-    backdrop-filter: blur(10px);
-}
-
-.navbar.scrolled {
-    padding: 15px 5%;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-}
-
-.logo {
-    font-size: 1.8rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-}
-
-.cyber-text {
-    color: var(--accent-blue);
-    text-shadow: var(--neon-shadow);
-}
-
-.security-text {
-    color: var(--text-light);
-}
-
-.nav-links {
-    display: flex;
-    gap: 30px;
-}
-
-.nav-links li a {
-    font-size: 1rem;
-    font-weight: 500;
-    position: relative;
-    padding: 5px 0;
-}
-
-.nav-links li a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple));
-    transition: var(--hover-transition);
-}
-
-.nav-links li a:hover::after,
-.nav-links li a.active::after {
-    width: 100%;
-}
-
-.menu-toggle {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.bar {
-    width: 25px;
-    height: 3px;
-    background-color: var(--text-light);
-    margin: 3px 0;
-    transition: var(--hover-transition);
-}
-
-/* ===== القسم الرئيسي ===== */
-.hero {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 150px 5% 100px;
-    background: radial-gradient(circle at center, var(--primary-light) 0%, var(--primary-dark) 70%);
-    position: relative;
-    overflow: hidden;
-}
-
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="none"/><path d="M0,0 L100,100 M100,0 L0,100" stroke="rgba(255,255,255,0.03)" stroke-width="0.5"/></svg>');
-    opacity: 0.5;
-    z-index: 0;
-}
-
-.hero-content {
-    flex: 1;
-    max-width: 600px;
-    z-index: 1;
-}
-
-.glitch {
-    font-size: 3.5rem;
-    font-weight: 800;
-    position: relative;
-    color: var(--text-light);
-    letter-spacing: 2px;
-    animation: glitch 5s infinite;
-}
-
-.glitch::before,
-.glitch::after {
-    content: attr(data-text);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0.8;
-}
-
-.glitch::before {
-    color: var(--accent-blue);
-    z-index: -1;
-    animation: glitch-effect 3s infinite;
-}
-
-.glitch::after {
-    color: var(--accent-purple);
-    z-index: -2;
-    animation: glitch-effect 2s infinite reverse;
-}
-
-@keyframes glitch-effect {
-    0% {
-        transform: translate(0);
-    }
-    20% {
-        transform: translate(-3px, 3px);
-    }
-    40% {
-        transform: translate(-3px, -3px);
-    }
-    60% {
-        transform: translate(3px, 3px);
-    }
-    80% {
-        transform: translate(3px, -3px);
-    }
-    100% {
-        transform: translate(0);
-    }
-}
-
-.subtitle {
-    font-size: 1.2rem;
-    color: var(--text-gray);
-    margin: 20px 0 40px;
-}
-
-.cta-buttons {
-    display: flex;
-    gap: 20px;
-}
-
-.cta-primary,
-.cta-secondary {
-    padding: 12px 30px;
-    border-radius: 30px;
-    font-size: 1rem;
-    font-weight: 600;
-    letter-spacing: 1px;
-    transition: var(--hover-transition);
-}
-
-.cta-primary {
-    background: linear-gradient(45deg, var(--accent-blue), var(--accent-purple));
-    color: var(--text-light);
-    box-shadow: 0 5px 15px rgba(0, 194, 255, 0.4);
-}
-
-.cta-primary:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 194, 255, 0.6);
-}
-
-.cta-secondary {
-    background: transparent;
-    color: var(--text-light);
-    border: 2px solid var(--accent-blue);
-    box-shadow: 0 0 10px rgba(0, 194, 255, 0.2);
-}
-
-.cta-secondary:hover {
-    background-color: rgba(0, 194, 255, 0.1);
-    box-shadow: 0 0 15px rgba(0, 194, 255, 0.4);
-}
-
-.hero-image {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    z-index: 1;
-}
-
-.image-container {
-    position: relative;
-    width: 80%;
-    max-width: 500px;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: var(--card-shadow);
-}
-
-.analyst-image {
-    width: 100%;
-    height: auto;
-    display: block;
-    transition: var(--hover-transition);
-}
-
-.image-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, rgba(0, 194, 255, 0.2), rgba(167, 66, 245, 0.2));
-    mix-blend-mode: overlay;
-}
-
-.floating-icons {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    pointer-events: none;
-}
-
-.icon-box {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: rgba(10, 10, 26, 0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 0 20px rgba(0, 194, 255, 0.5);
-    animation: float 6s infinite ease-in-out;
-}
-
-.icon-box:nth-child(1) {
-    top: 10%;
-    left: -25px;
-    animation-delay: 0s;
-}
-
-.icon-box:nth-child(2) {
-    top: 30%;
-    right: -25px;
-    animation-delay: 1s;
-}
-
-.icon-box:nth-child(3) {
-    bottom: 20%;
-    left: -25px;
-    animation-delay: 2s;
-}
-
-.icon-box:nth-child(4) {
-    bottom: 10%;
-    right: -25px;
-    animation-delay: 3s;
-}
-
-.icon-box:nth-child(5) {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    animation-delay: 4s;
-}
-
-.icon-box i {
-    font-size: 1.5rem;
-    color: var(--accent-blue);
-}
-
-@keyframes float {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-15px);
-    }
-}
-
-/* ===== قسم الخدمات ===== */
-.services {
-    background-color: var(--primary-light);
-    position: relative;
-    overflow: hidden;
-}
-
-.services::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="none"/><circle cx="50" cy="50" r="1" fill="rgba(255,255,255,0.05)"/></svg>');
-    opacity: 0.5;
-    z-index: 0;
-}
-
-.services-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    padding: 0 5%;
-    position: relative;
-    z-index: 1;
-}
-
-.service-card {
-    background: linear-gradient(135deg, rgba(22, 33, 62, 0.8), rgba(10, 10, 26, 0.8));
-    border-radius: 10px;
-    padding: 30px;
-    box-shadow: var(--card-shadow);
-    transition: var(--hover-transition);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    position: relative;
-    overflow: hidden;
-}
-
-.service-card::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 80%);
-    opacity: 0;
-    transition: var(--hover-transition);
-    z-index: 0;
-}
-
-.service-card:hover::before {
-    opacity: 1;
-    transform: scale(1.2);
-}
-
-.service-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
-}
-
-.service-icon {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    background: linear-gradient(45deg, var(--accent-blue), var(--accent-purple));
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-    position: relative;
-    z-index: 1;
-}
-
-.service-icon i {
-    font-size: 2rem;
-    color: var(--text-light);
-}
-
-.service-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-    position: relative;
-    z-index: 1;
-}
-
-.service-card p {
-    color: var(--text-gray);
-    margin-bottom: 20px;
-    position: relative;
-    z-index: 1;
-}
-
-.service-details {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    position: relative;
-    z-index: 1;
-}
-
-.progress-container {
-    flex: 1;
-    height: 6px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 3px;
-    overflow: hidden;
-    margin-left: 10px;
-}
-
-.progress-bar {
-    height: 100%;
-    background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple));
-    border-radius: 3px;
-    width: 0;
-    transition: width 1.5s ease-in-out;
-}
-
-.percentage {
-    font-weight: 600;
-    color: var(--accent-blue);
-}
-
-.service-btn {
-    background: transparent;
-    color: var(--accent-blue);
-    border: 1px solid var(--accent-blue);
-    padding: 8px 20px;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    font-weight: 500;
-    transition: var(--hover-transition);
-    position: relative;
-    z-index: 1;
-}
-
-.service-btn:hover {
-    background-color: var(--accent-blue);
-    color: var(--primary-dark);
-}
-
-/* ===== قسم محاكاة الهجمات ===== */
-.attack-simulation {
-    background-color: var(--primary-dark);
-    position: relative;
-    overflow: hidden;
-}
-
-.simulation-container {
-    padding: 0 5%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.simulation-controls {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 40px;
-    flex-wrap: wrap;
-}
-
-.sim-btn {
-    background-color: rgba(255, 255, 255, 0.05);
-    color: var(--text-gray);
-    padding: 10px 20px;
-    border-radius: 30px;
-    font-size: 0.9rem;
-    font-weight: 500;
-    transition: var(--hover-transition);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.sim-btn:hover,
-.sim-btn.active {
-    background: linear-gradient(45deg, var(--accent-blue), var(--accent-purple));
-    color: var(--text-light);
-    box-shadow: 0 5px 15px rgba(0, 194, 255, 0.3);
-}
-
-.simulation-display {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-    align-items: center;
-}
-
-.attack-visualization {
-    background-color: rgba(10, 10, 26, 0.8);
-    border-radius: 10px;
-    height: 400px;
-    position: relative;
-    overflow: hidden;
-    box-shadow: var(--card-shadow);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.nodes-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.attack-info {
-    padding: 20px;
-    background: linear-gradient(135deg, rgba(22, 33, 62, 0.8), rgba(10, 10, 26, 0.8));
-    border-radius: 10px;
-    box-shadow: var(--card-shadow);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.attack-info h3 {
-    font-size: 1.8rem;
-    margin-bottom: 15px;
-    color: var(--accent-blue);
-}
-
-.attack-info p {
-    color: var(--text-gray);
-    margin-bottom: 20px;
-    line-height: 1.7;
-}
-
-.attack-stats {
-    display: flex;
-    justify-content: space-around;
-    margin: 30px 0;
-}
-
-.stat {
-    text-align: center;
-}
-
-.stat-value {
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--accent-blue);
-    display: block;
-    margin-bottom: 5px;
-}
-
-.stat-label {
-    color: var(--text-gray);
-    font-size: 0.9rem;
-}
-
-.defense-btn {
-    background: linear-gradient(45deg, var(--accent-green), var(--accent-blue));
-    color: var(--primary-dark);
-    padding: 12px 25px;
-    border-radius: 30px;
-    font-size: 1rem;
-    font-weight: 600;
-    display: block;
-    margin: 0 auto;
-    transition: var(--hover-transition);
-}
-
-.defense-btn:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 255, 140, 0.3);
-}
-
-/* ===== قسم الرسوم البيانية ===== */
-.stats {
-    background-color: var(--primary-light);
-    position: relative;
-    overflow: hidden;
-}
-
-.charts-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-    gap: 30px;
-    padding: 0 5%;
-}
-
-.chart-card {
-    background: linear-gradient(135deg, rgba(22, 33, 62, 0.8), rgba(10, 10, 26, 0.8));
-    border-radius: 10px;
-    padding: 30px;
-    box-shadow: var(--card-shadow);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.chart-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    text-align: center;
-    color: var(--text-light);
-}
-
-.chart-container {
-    height: 300px;
-    position: relative;
-}
-
-/* ===== قسم اختبار الأمان ===== */
-.security-test {
-    background-color: var(--primary-dark);
-    position: relative;
-    overflow: hidden;
-}
-
-.test-container {
-    max-width: 800px;
-    margin: 0 auto;
-    background: linear-gradient(135deg, rgba(22, 33, 62, 0.8), rgba(10, 10, 26, 0.8));
-    border-radius: 10px;
-    padding: 40px;
-    box-shadow: var(--card-shadow);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.test-progress {
-    margin-bottom: 30px;
-}
-
-.progress-bar {
-    height: 6px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 3px;
-    overflow: hidden;
-    margin-bottom: 10px;
-}
-
-.progress-fill {
-    height: 100%;
-    width: 20%;
-    background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple));
-    border-radius: 3px;
-    transition: width 0.5s ease-in-out;
-}
-
-.progress-text {
-    font-size: 0.9rem;
-    color: var(--text-gray);
-}
-
-.question-container {
-    display: none;
-}
-
-.question-container.active {
-    display: block;
-}
-
-.question-container h3 {
-    font-size: 1.3rem;
-    margin-bottom: 20px;
-}
-
-.options {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.option {
-    display: flex;
-    align-items: center;
-    padding: 15px;
-    background-color: rgba(255, 255, 255, 0.05);
-    border-radius: 8px;
-    cursor: pointer;
-    transition: var(--hover-transition);
-}
-
-.option:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-.option input {
-    margin-left: 15px;
-    cursor: pointer;
-}
-
-.option-text {
-    font-size: 1rem;
-}
-
-.test-controls {
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
-}
-
-.test-btn {
-    background: linear-gradient(45deg, var(--accent-blue), var(--accent-purple));
-    color: var(--text-light);
-    padding: 12px 25px;
-    border-radius: 30px;
-    font-size: 1rem;
-    font-weight: 600;
-    transition: var(--hover-transition);
-}
-
-.test-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0, 194, 255, 0.3);
-}
-
-.test-results {
-    text-align: center;
-}
-
-.test-results h3 {
-    font-size: 1.8rem;
-    margin-bottom: 30px;
-}
-
-.score-container {
-    margin: 30px 0;
-}
-
-.score-circle {
-    width: 150px;
-    height: 150px;
-    margin: 0 auto;
-}
-
-.score-svg {
-    width: 100%;
-    height: 100%;
-}
-
-.score-bg {
-    fill: none;
-    stroke: rgba(255, 255, 255, 0.1);
-    stroke-width: 3;
-}
-
-.score-fill {
-    fill: none;
-    stroke: url(#scoreGradient);
-    stroke-width: 3;
-    stroke-linecap: round;
-    transform: rotate(-90deg);
-    transform-origin: center;
-    transition: stroke-dasharray 1s ease-in-out;
-}
-
-.score-text {
-    font-size: 1.5rem;
-    font-weight: 700;
-    fill: var(--text-light);
-    text-anchor: middle;
-}
-
-.recommendations {
-    text-align: right;
-    margin-top: 30px;
-}
-
-.recommendations h4 {
-    font-size: 1.2rem;
-    margin-bottom: 15px;
-    color: var(--accent-blue);
-}
-
-.recommendations ul {
-    list-style-type: disc;
-    padding-right: 20px;
-}
-
-.recommendations li {
-    margin-bottom: 10px;
-    color: var(--text-gray);
-}
-
-/* ===== قسم المشاريع ===== */
-.projects {
-    background-color: var(--primary-light);
-    position: relative;
-    overflow: hidden;
-}
-
-.projects-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 30px;
-    padding: 0 5%;
-}
-
-.project-card {
-    background: linear-gradient(135deg, rgba(22, 33, 62, 0.8), rgba(10, 10, 26, 0.8));
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: var(--card-shadow);
-    transition: var(--hover-transition);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
-}
-
-.project-image {
-    position: relative;
-    overflow: hidden;
-    height: 200px;
-}
-
-.project-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: var(--hover-transition);
-}
-
-.project-card:hover .project-image img {
-    transform: scale(1.1);
-}
-
-.project-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to top, rgba(10, 10, 26, 0.9), transparent);
-    display: flex;
-    align-items: flex-end;
-    padding: 20px;
-    opacity: 0;
-    transition: var(--hover-transition);
-}
-
-.project-card:hover .project-overlay {
-    opacity: 1;
-}
-
-.project-tech {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.project-tech span {
-    background-color: rgba(0, 194, 255, 0.2);
-    color: var(--accent-blue);
-    padding: 5px 10px;
-    border-radius: 15px;
-    font-size: 0.8rem;
-    font-weight: 500;
-}
-
-.project-info {
-    padding: 20px;
-}
-
-.project-info h3 {
-    font-size: 1.3rem;
-    margin-bottom: 10px;
-}
-
-.project-info p {
-    color: var(--text-gray);
-    margin-bottom: 20px;
-    font-size: 0.95rem;
-}
-
-.project-links {
-    display: flex;
-    gap: 15px;
-}
-
-.project-link {
-    background-color: rgba(255, 255, 255, 0.05);
-    color: var(--text-light);
-    padding: 8px 15px;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    transition: var(--hover-transition);
-}
-
-.project-link:hover {
-    background-color: var(--accent-blue);
-    color: var(--primary-dark);
-}
-
-/* ===== قسم الاتصال ===== */
-.contact {
-    background-color: var(--primary-dark);
-    position: relative;
-    overflow: hidden;
-}
-
-.contact-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 50px;
-    padding: 0 5%;
-}
-
-.contact-info {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
-.info-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 15px;
-}
-
-.info-item i {
-    font-size: 1.5rem;
-    color: var(--accent-blue);
-    width: 40px;
-    height: 40px;
-    background-color: rgba(0, 194, 255, 0.1);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.info-item h3 {
-    font-size: 1.2rem;
-    margin-bottom: 5px;
-}
-
-.info-item p {
-    color: var(--text-gray);
-}
-
-.social-links {
-    display: flex;
-    gap: 15px;
-    margin-top: 20px;
-}
-
-.social-link {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.05);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: var(--hover-transition);
-}
-
-.social-link i {
-    font-size: 1.2rem;
-    color: var(--text-light);
-    transition: var(--hover-transition);
-}
-
-.social-link:hover {
-    background-color: var(--accent-blue);
-    transform: translateY(-5px);
-}
-
-.social-link:hover i {
-    color: var(--primary-dark);
-}
-
-.contact-form {
-    background: linear-gradient(135deg, rgba(22, 33, 62, 0.8), rgba(10, 10, 26, 0.8));
-    border-radius: 10px;
-    padding: 30px;
-    box-shadow: var(--card-shadow);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.form-group {
-    margin-bottom: 20px;
-    position: relative;
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 12px 15px;
-    background-color: rgba(255, 255, 255, 0.05);
-    border: none;
-    border-radius: 5px;
-    color: var(--text-light);
-    font-family: var(--font-main);
-    font-size: 1rem;
-    transition: var(--hover-transition);
-}
-
-.form-group textarea {
-    min-height: 150px;
-    resize: vertical;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-    outline: none;
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-.input-focus-effect {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple));
-    transition: var(--hover-transition);
-}
-
-.form-group input:focus ~ .input-focus-effect,
-.form-group textarea:focus ~ .input-focus-effect {
-    width: 100%;
-}
-
-.submit-btn {
-    background: linear-gradient(45deg, var(--accent-blue), var(--accent-purple));
-    color: var(--text-light);
-    padding: 12px 30px;
-    border-radius: 30px;
-    font-size: 1rem;
-    font-weight: 600;
-    width: 100%;
-    transition: var(--hover-transition);
-    margin-top: 10px;
-}
-
-.submit-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 194, 255, 0.3);
-}
-
-/* ===== التذييل ===== */
-.footer {
-    background-color: var(--primary-light);
-    padding: 80px 5% 30px;
-    position: relative;
-    overflow: hidden;
-}
-
-.footer::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="none"/><circle cx="50" cy="50" r="1" fill="rgba(255,255,255,0.05)"/></svg>');
-    opacity: 0.5;
-    z-index: 0;
-}
-
-.footer-content {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 50px;
-    margin-bottom: 50px;
-    position: relative;
-    z-index: 1;
-}
-
-.footer-logo {
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 20px;
-}
-
-.footer-logo p {
-    font-size: 1rem;
-    color: var(--text-gray);
-    margin-top: 10px;
-}
-
-.footer-links {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-}
-
-.footer-column h3 {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-    position: relative;
-    display: inline-block;
-}
-
-.footer-column h3::after {
-    content: '';
-    position: absolute;
-    bottom: -8px;
-    left: 0;
-    width: 40px;
-    height: 3px;
-    background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple));
-    border-radius: 1.5px;
-}
-
-.footer-column ul {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.footer-column ul li a {
-    color: var(--text-gray);
-    font-size: 0.95rem;
-    transition: var(--hover-transition);
-}
-
-.footer-column ul li a:hover {
-    color: var(--accent-blue);
-    transform: translateX(-5px);
-}
-
-.footer-bottom {
-    text-align: center;
-    padding-top: 30px;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-    position: relative;
-    z-index: 1;
-}
-
-.footer-bottom p {
-    color: var(--text-gray);
-    font-size: 0.9rem;
-}
-
-.credits {
-    margin-top: 10px;
-    font-size: 0.8rem;
-}
-
-.credits a {
-    color: var(--accent-blue);
-}
-
-.credits a:hover {
-    text-decoration: underline;
-}
-
-/* ===== النافذة المنبثقة ===== */
-.modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    z-index: 2000;
-    overflow-y: auto;
-    backdrop-filter: blur(5px);
-}
-
-.modal-content {
-    background: linear-gradient(135deg, rgba(22, 33, 62, 0.95), rgba(10, 10, 26, 0.95));
-    border-radius: 10px;
-    max-width: 800px;
-    width: 90%;
-    margin: 50px auto;
-    padding: 30px;
-    box-shadow: var(--card-shadow);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    position: relative;
-}
-
-.close-modal {
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    font-size: 1.5rem;
-    color: var(--text-gray);
-    cursor: pointer;
-    transition: var(--hover-transition);
-}
-
-.close-modal:hover {
-    color: var(--accent-red);
-}
-
-#modal-title {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-    text-align: center;
-    color: var(--accent-blue);
-}
-
-/* ===== التنبيهات ===== */
-.notification {
-    position: fixed;
-    bottom: 30px;
-    left: 30px;
-    background: linear-gradient(135deg, rgba(22, 33, 62, 0.9), rgba(10, 10, 26, 0.9));
-    border-radius: 10px;
-    padding: 15px 25px;
-    box-shadow: var(--card-shadow);
-    border-right: 4px solid var(--accent-blue);
-    transform: translateY(150%);
-    transition: transform 0.5s ease-in-out;
-    z-index: 1500;
-    backdrop-filter: blur(10px);
-    max-width: 350px;
-}
-
-.notification.show {
-    transform: translateY(0);
-}
-
-.notification-content {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.notification-icon {
-    font-size: 1.5rem;
-    color: var(--accent-blue);
-}
-
-.notification-message {
-    color: var(--text-light);
-    font-size: 0.95rem;
-}
-
-/* ===== التجاوب مع الشاشات المختلفة ===== */
-@media (max-width: 1200px) {
-    .hero {
-        flex-direction: column;
-        text-align: center;
-        gap: 50px;
-    }
+    <!-- الوصف (يظهر تحت العنوان في جوجل - يجب أن يكون مغرياً) -->
+    <meta name="description" content="المنصة العربية الأولى لتحليل التهديدات السيبرانية. تغطية حصرية للهكر الهزبري، أخبار اختراق يمن نت، هجمات أبشر، وتقارير الأمن الرقمي في السعودية، مصر، اليمن وجميع الدول العربية. تحليل جراحي للواقع السيبراني.">
     
-    .hero-content {
-        max-width: 100%;
-    }
+    <!-- الكلمات المفتاحية (لا تزال مهمة للبحث العربي) -->
+    <meta name="keywords" content="الأمن السيبراني العربي, الهكر الهزبري, اختراق يمن نت, جيش اليمن الإلكتروني, أخبار الأمن السيبراني, هجمات على السعودية, ثغرات أمنية, حماية البيانات, أبشر اختراق, أرامكو هجوم, تحليلات سيبرانية, اليمن, السعودية, مصر, المغرب, العراق">
     
-    .cta-buttons {
-        justify-content: center;
-    }
+    <!-- مؤلف الموقع (اسمك أو اسم المنصة) -->
+    <meta name="author" content="المنارة السيبرانية العربية - سهيل">
     
-    .simulation-display {
-        grid-template-columns: 1fr;
-    }
+    <!-- التحكم في الزحف (نعم، افحص كل شيء) -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large">
     
-    .footer-content {
-        grid-template-columns: 1fr;
+    <!-- التحقق من ملكية جوجل (استبدل الرمز بعد الرفع) -->
+    <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE">
+    
+    <!-- التحقق من ملكية بينغ (اختياري) -->
+    <meta name="msvalidate.01" content="YOUR_BING_CODE">
+    
+    <!-- الرابط الأساسي (لمنع المحتوى المكرر) -->
+    <link rel="canonical" href="https://YOUR_USERNAME.github.io/">
+    
+    <!-- ==================== Open Graph (فيسبوك، لينكد إن) ==================== -->
+    <meta property="og:title" content="المنارة السيبرانية العربية - تحليل جراحي للواقع السيبراني العربي">
+    <meta property="og:description" content="تغطية حصرية للهكر الهزبري وأخبار الاختراقات في 22 دولة عربية. مرجعك الأول للأمن الرقمي.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://YOUR_USERNAME.github.io/">
+    <meta property="og:image" content="https://YOUR_USERNAME.github.io/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="ar_AR">
+    <meta property="og:site_name" content="المنارة السيبرانية العربية">
+    
+    <!-- ==================== Twitter Card ==================== -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="المنارة السيبرانية العربية">
+    <meta name="twitter:description" content="أخبار وتحليلات الأمن السيبراني في العالم العربي">
+    <meta name="twitter:image" content="https://YOUR_USERNAME.github.io/twitter-card.jpg">
+    <meta name="twitter:site" content="@CyberArabLighthouse">
+    
+    <!-- ==================== بيانات Schema.org المتقدمة (سر قوة جوجل) ==================== -->
+    
+    <!-- Schema: المنظمة (يظهر الموقع كمؤسسة إخبارية موثوقة) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "NewsMediaOrganization",
+        "@id": "https://YOUR_USERNAME.github.io/#organization",
+        "name": "المنارة السيبرانية العربية",
+        "url": "https://YOUR_USERNAME.github.io/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://YOUR_USERNAME.github.io/logo.png",
+            "width": 512,
+            "height": 512
+        },
+        "sameAs": [
+            "https://twitter.com/CyberArabLighthouse",
+            "https://www.linkedin.com/company/cyberarabic"
+        ],
+        "description": "منصة إخبارية وتحليلية متخصصة في الأمن السيبراني في الدول العربية",
+        "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "العالم العربي"
+        }
     }
-}
+    </script>
+    
+    <!-- Schema: موقع الويب (يساعد في ظهور البحث المدمج) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "@id": "https://YOUR_USERNAME.github.io/#website",
+        "name": "المنارة السيبرانية العربية",
+        "url": "https://YOUR_USERNAME.github.io/",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://YOUR_USERNAME.github.io/?s={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
+        },
+        "publisher": {
+            "@id": "https://YOUR_USERNAME.github.io/#organization"
+        }
+    }
+    </script>
+    
+    <!-- Schema: Breadcrumb (فتات الخبز - للتنقل) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "الرئيسية",
+            "item": "https://YOUR_USERNAME.github.io/"
+        }]
+    }
+    </script>
+    
+    <!-- ==================== أيقونات وتحسينات الأداء ==================== -->
+    <link rel="icon" type="image/png" sizes="32x32" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230a192f'/%3E%3Ccircle cx='16' cy='13' r='7' fill='%23c5a059'/%3E%3Cpath d='M10 23 L22 23 L19 27 L13 27 Z' fill='%2364ffda'/%3E%3C/svg%3E">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Crect width='180' height='180' fill='%230a192f'/%3E%3Ccircle cx='90' cy='70' r='35' fill='%23c5a059'/%3E%3Cpath d='M50 130 L130 130 L110 160 L70 160 Z' fill='%2364ffda'/%3E%3C/svg%3E">
+    
+    <!-- Preconnect للخطوط والسيرفرات الخارجية -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- خط عربي جميل وسريع -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- ==================== الأنماط CSS المحسنة للسرعة ==================== -->
+    <style>
+        /* متغيرات الألوان - هوية المنارة */
+        :root {
+            --primary-navy: #0a192f;
+            --secondary-blue: #172a45;
+            --lighthouse-gold: #c5a059;
+            --cyber-green: #64ffda;
+            --text-gray: #8892b0;
+            --white: #e6f1ff;
+            --danger-red: #ff6b6b;
+            --warning-orange: #ffb347;
+        }
 
-@media (max-width: 900px) {
-    .menu-toggle {
-        display: flex;
-    }
-    
-    .nav-links {
-        position: fixed;
-        top: 80px;
-        right: -100%;
-        width: 100%;
-        height: calc(100vh - 80px);
-        background-color: var(--primary-dark);
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        transition: var(--hover-transition);
-        z-index: 999;
-    }
-    
-    .nav-links.active {
-        right: 0;
-    }
-    
-    .charts-container {
-        grid-template-columns: 1fr;
-    }
-    
-    .footer-links {
-        grid-template-columns: 1fr 1fr;
-    }
-}
+        /* إعادة تعيين الأنماط وتحسين الأداء */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-@media (max-width: 600px) {
-    .section-title {
-        font-size: 2rem;
-    }
-    
-    .glitch {
-        font-size: 2.5rem;
-    }
-    
-    .cta-buttons {
-        flex-direction: column;
-        gap: 15px;
-    }
-    
-    .services-container,
-    .projects-container {
-        grid-template-columns: 1fr;
-    }
-    
-    .footer-links {
-        grid-template-columns: 1fr;
-    }
-    
-    .contact-container {
-        grid-template-columns: 1fr;
-    }
-}
-</Style>
+        body {
+            background-color: var(--primary-navy);
+            color: var(--white);
+            font-family: 'Tajawal', 'Segoe UI', sans-serif;
+            line-height: 1.7;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            font-weight: 400;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* شريط التقدم - لتحسين تجربة المستخدم */
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--lighthouse-gold), var(--cyber-green));
+            z-index: 1001;
+            transition: width 0.1s;
+            box-shadow: 0 0 10px var(--lighthouse-gold);
+        }
+
+        /* الهيدر الرئيسي */
+        header {
+            background: rgba(10, 25, 47, 0.98);
+            border-bottom: 2px solid var(--lighthouse-gold);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+        }
+
+        .logo-area h1 {
+            margin: 0;
+            font-size: 1.8rem;
+            color: var(--lighthouse-gold);
+            letter-spacing: 1px;
+            transition: 0.3s;
+            font-weight: 800;
+            cursor: pointer;
+        }
+
+        .logo-area h1:hover {
+            text-shadow: 0 0 15px var(--lighthouse-gold);
+        }
+
+        .logo-area .subtitle {
+            font-size: 0.8rem;
+            color: var(--cyber-green);
+            letter-spacing: 2px;
+        }
+
+        .nav-status {
+            font-size: 0.85rem;
+            color: var(--cyber-green);
+            text-transform: uppercase;
+            padding: 5px 15px;
+            border: 1px solid var(--cyber-green);
+            border-radius: 30px;
+            animation: pulse 2s infinite;
+            background: rgba(100, 255, 218, 0.05);
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; box-shadow: 0 0 5px var(--cyber-green); }
+            50% { opacity: 0.8; box-shadow: 0 0 15px var(--cyber-green); }
+            100% { opacity: 1; box-shadow: 0 0 5px var(--cyber-green); }
+        }
+
+        /* شريط البحث */
+        .search-container {
+            background: var(--secondary-blue);
+            padding: 15px 5%;
+            border-bottom: 1px solid var(--lighthouse-gold);
+        }
+
+        .search-box {
+            display: flex;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .search-input {
+            flex: 1;
+            padding: 14px 20px;
+            background: var(--primary-navy);
+            border: 2px solid var(--lighthouse-gold);
+            border-left: none;
+            border-radius: 0 40px 40px 0;
+            color: var(--white);
+            font-size: 1rem;
+            transition: 0.3s;
+            font-family: 'Tajawal', sans-serif;
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: var(--cyber-green);
+            box-shadow: 0 0 15px rgba(100, 255, 218, 0.4);
+        }
+
+        .search-btn {
+            padding: 14px 30px;
+            background: var(--lighthouse-gold);
+            border: 2px solid var(--lighthouse-gold);
+            border-right: none;
+            border-radius: 40px 0 0 40px;
+            color: var(--primary-navy);
+            font-weight: 800;
+            cursor: pointer;
+            transition: 0.3s;
+            font-size: 1rem;
+            font-family: 'Tajawal', sans-serif;
+        }
+
+        .search-btn:hover {
+            background: var(--cyber-green);
+            border-color: var(--cyber-green);
+        }
+
+        /* شبكة المحتوى الرئيسية - 3 أعمدة */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 300px 1fr 280px;
+            gap: 2px;
+            background: var(--lighthouse-gold);
+            flex: 1;
+        }
+
+        /* الشريط الجانبي الأيسر - قائمة الدول */
+        .sidebar {
+            background: var(--primary-navy);
+            padding: 25px 15px;
+        }
+
+        .sidebar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .sidebar-header h2 {
+            font-size: 1.2rem;
+            color: var(--lighthouse-gold);
+            border-bottom: 2px solid var(--lighthouse-gold);
+            padding-bottom: 5px;
+            font-weight: 700;
+        }
+
+        .country-count {
+            background: var(--secondary-blue);
+            padding: 3px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: var(--cyber-green);
+            font-weight: 700;
+        }
+
+        .country-nav {
+            list-style: none;
+            max-height: 650px;
+            overflow-y: auto;
+            padding-left: 5px;
+        }
+
+        .country-nav::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        .country-nav::-webkit-scrollbar-track {
+            background: var(--secondary-blue);
+        }
+
+        .country-nav::-webkit-scrollbar-thumb {
+            background: var(--lighthouse-gold);
+            border-radius: 5px;
+        }
+
+        .country-link {
+            padding: 14px 18px;
+            background: var(--secondary-blue);
+            margin-bottom: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-right: 4px solid transparent;
+            font-weight: 600;
+            border-radius: 0 8px 8px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .country-link:hover {
+            background: #1f3a5f;
+            border-right: 4px solid var(--lighthouse-gold);
+            padding-right: 25px;
+            transform: translateX(-3px);
+        }
+
+        .country-link.active {
+            border-right: 4px solid var(--cyber-green);
+            background: #1f3a5f;
+            box-shadow: 0 0 15px rgba(100, 255, 218, 0.2);
+        }
+
+        .threat-indicator {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--cyber-green);
+        }
+
+        .threat-indicator.high {
+            background: var(--danger-red);
+            animation: blink 1.5s infinite;
+        }
+
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0.3; }
+            100% { opacity: 1; }
+        }
+
+        /* منطقة المحتوى الرئيسي */
+        .report-content {
+            background: var(--primary-navy);
+            padding: 35px;
+            overflow-y: auto;
+            min-height: 750px;
+        }
+
+        .breadcrumb {
+            margin-bottom: 20px;
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+
+        .breadcrumb a {
+            color: var(--cyber-green);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .intel-header {
+            margin-bottom: 30px;
+            border-bottom: 1px solid var(--secondary-blue);
+            padding-bottom: 20px;
+        }
+
+        .intel-label {
+            color: var(--cyber-green);
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            display: inline-block;
+            background: rgba(100, 255, 218, 0.1);
+            padding: 5px 15px;
+            border-radius: 25px;
+            margin-bottom: 10px;
+            border: 1px solid rgba(100, 255, 218, 0.3);
+        }
+
+        .intel-title {
+            font-size: 2.2rem;
+            color: var(--white);
+            margin: 15px 0 10px;
+            line-height: 1.3;
+            font-weight: 800;
+        }
+
+        .publish-date {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .publish-date span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .long-news-text {
+            color: var(--text-gray);
+            font-size: 1.1rem;
+            text-align: justify;
+        }
+
+        .long-news-text p {
+            margin-bottom: 20px;
+        }
+
+        .long-news-text strong {
+            color: var(--white);
+        }
+
+        .quote-section {
+            background: var(--secondary-blue);
+            padding: 30px;
+            border-right: 5px solid var(--lighthouse-gold);
+            margin: 30px 0;
+            color: var(--white);
+            font-style: italic;
+            border-radius: 0 20px 20px 0;
+            font-size: 1.2rem;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+        }
+
+        .hazbari-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, rgba(100, 255, 218, 0.15), rgba(197, 160, 89, 0.15));
+            color: var(--cyber-green);
+            padding: 8px 25px;
+            border: 1px solid var(--cyber-green);
+            border-radius: 30px;
+            font-size: 0.9rem;
+            margin: 20px 0 10px;
+            font-weight: 700;
+            animation: glow 2s infinite;
+            box-shadow: 0 0 10px rgba(100, 255, 218, 0.3);
+        }
+
+        @keyframes glow {
+            0% { box-shadow: 0 0 5px var(--cyber-green); }
+            50% { box-shadow: 0 0 20px var(--cyber-green); }
+            100% { box-shadow: 0 0 5px var(--cyber-green); }
+        }
+
+        /* الشريط الجانبي الأيمن - آخر الأخبار والأكثر قراءة */
+        .right-sidebar {
+            background: var(--primary-navy);
+            padding: 25px 15px;
+        }
+
+        .latest-news, .popular-news {
+            background: var(--secondary-blue);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .latest-news h3, .popular-news h3 {
+            color: var(--lighthouse-gold);
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            border-bottom: 2px solid var(--primary-navy);
+            padding-bottom: 8px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .news-item {
+            padding: 12px 0;
+            border-bottom: 1px solid #233554;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .news-item:hover {
+            padding-right: 10px;
+            color: var(--cyber-green);
+        }
+
+        .news-item:last-child {
+            border-bottom: none;
+        }
+
+        .news-time {
+            font-size: 0.7rem;
+            color: var(--text-gray);
+            display: block;
+            margin-bottom: 3px;
+        }
+
+        .news-title {
+            font-weight: 500;
+        }
+
+        /* قسم "عن المنارة" في المحتوى الرئيسي */
+        .about-section {
+            background: var(--secondary-blue);
+            padding: 25px;
+            border-radius: 12px;
+            margin: 30px 0;
+        }
+
+        .about-section h2 {
+            color: var(--lighthouse-gold);
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin: 25px 0;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 15px;
+            background: rgba(10, 25, 47, 0.5);
+            border-radius: 10px;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--cyber-green);
+        }
+
+        .stat-label {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+
+        /* تذييل الصفحة */
+        footer {
+            background: var(--secondary-blue);
+            padding: 40px 5% 20px;
+            margin-top: 2px;
+            border-top: 2px solid var(--lighthouse-gold);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-col h4 {
+            color: var(--lighthouse-gold);
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-col ul li a {
+            color: var(--text-gray);
+            text-decoration: none;
+            transition: 0.2s;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--cyber-green);
+            padding-right: 8px;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid var(--primary-navy);
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+
+        /* أنيميشن */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade { 
+            animation: fadeIn 0.5s ease-out; 
+        }
+
+        /* مؤشر التحميل */
+        .loader {
+            border: 5px solid var(--secondary-blue);
+            border-top: 5px solid var(--lighthouse-gold);
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            animation: spin 1s linear infinite;
+            margin: 60px auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* التجاوب مع الأجهزة */
+        @media (max-width: 1100px) {
+            .main-grid {
+                grid-template-columns: 260px 1fr 240px;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+            .sidebar, .right-sidebar {
+                display: none;
+            }
+            .report-content {
+                padding: 25px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+            .intel-title {
+                font-size: 1.8rem;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
-    <Center><img src="https://via.placeholder.com/150/00FF9E/000000?text=CyberSecurity+Logo" alt="شعار الأمن السيبراني"></center>
-    <marquee><h1>حمايتك هدفنا</h1></marquee>
-    
-    <div class="particles-container">
-        <div id="particles-js"></div>
+    <!-- شريط التقدم -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- الهيدر -->
+    <header>
+        <div class="logo-area">
+            <h1 onclick="location.reload()" style="cursor: pointer;">🏮 المنارة السيبرانية العربية</h1>
+            <div class="subtitle">مرصد الردع والأمن الرقمي</div>
+        </div>
+        <div class="nav-status">
+            ⚡ مباشر | 22 دولة | 24/7
+        </div>
+    </header>
+
+    <!-- شريط البحث (مهم جداً لتحسين SEO) -->
+    <div class="search-container">
+        <div class="search-box">
+            <input type="text" class="search-input" placeholder="ابحث عن دولة، هكر، ثغرة، اختراق..." id="searchInput" aria-label="بحث">
+            <button class="search-btn" onclick="searchSite()" aria-label="بحث">🔍 بحث</button>
+        </div>
     </div>
 
-    <nav class="navbar">
-        <div class="logo">
-            <span class="cyber-text">CYBER</span><span class="security-text">SECURITY</span>
-        </div>
-        <div class="menu-toggle">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
-        <ul class="nav-links">
-            <li><a href="#home" class="active">الرئيسية</a></li>
-            <li><a href="#services">خدماتنا</a></li>
-            <li><a href="#about">من نحن</a></li>
-            <li><a href="#projects">مشاريعنا</a></li>
-            <li><a href="#contact">اتصل بنا</a></li>
-        </ul>
-    </nav>
-
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1 class="glitch" data-text="خبير الأمن السيبراني سهيل الهزبري">خبير الأمن السيبراني سهيل الهزبري</h1>
-            <p class="subtitle">حماية الأنظمة والشبكات من التهديدات الرقمية</p>
-            <div class="cta-buttons">
-                <button class="cta-primary">تواصل معنا</button>
-                <a href=""><button class="cta-secondary"> إربح من الإنترنت</button>
+    <!-- المحتوى الرئيسي -->
+    <div class="main-grid">
+        <!-- الشريط الجانبي - قائمة الدول -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>📡 أطلس التهديدات</h2>
+                <span class="country-count">22 دولة</span>
             </div>
-        </div>
-        <div class="hero-image">
-            <div class="image-container">
-                <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="خبير أمن سيبراني" class="analyst-image">
-                <div class="image-overlay"></div>
-            </div>
-            <div class="floating-icons">
-                <div class="icon-box"><i class="fas fa-shield-alt"></i></div>
-                <div class="icon-box"><i class="fas fa-lock"></i></div>
-                <div class="icon-box"><i class="fas fa-user-secret"></i></div>
-                <div class="icon-box"><i class="fas fa-server"></i></div>
-                <div class="icon-box"><i class="fas fa-code"></i></div>
-            </div>
-        </div>
-    </section>
+            <ul class="country-nav" id="countryNav">
+                <!-- سيتم تعبئة الدول عبر JavaScript -->
+            </ul>
+        </aside>
 
-    <section id="about" class="about">
-        <div class="section-header">
-            <h2 class="section-title">من نحن</h2>
-            <p class="section-subtitle">نحن متخصصون في تقديم أفضل خدمات الأمن السيبراني لحماية الشركات والأفراد من التهديدات الإلكترونية. أسعى من خلال هذه الصفحة إلى نشر الأمن والتقدم والتقنية للأفراد والمجتمع.</p>
-        </div>
-        </section>
-
-    <section id="services" class="services">
-        <div class="section-header">
-            <h2 class="section-title">خدماتنا المتخصصة</h2>
-            <p class="section-subtitle">نقدم مجموعة متكاملة من خدمات الأمن السيبراني لحماية أعمالك</p>
-        </div>
-        <div class="services-container">
-            <div class="service-card" data-service="penetration">
-                <div class="service-icon">
-                    <i class="fas fa-user-shield"></i>
+        <!-- منطقة المحتوى الرئيسي -->
+        <main class="report-content" id="reportArea">
+            <!-- المحتوى الافتراضي - صفحة رئيسية غنية بالمحتوى (لتحسين SEO) -->
+            <div class="intel-header">
+                <span class="intel-label">🏮 المنارة السيبرانية</span>
+                <h1 class="intel-title">المنصة العربية الأولى لتحليل الأمن السيبراني</h1>
+                <div class="publish-date">
+                    <span>🗓️ آخر تحديث: 14 فبراير 2026</span>
+                    <span>📊 مؤشر التهديدات: مرتفع</span>
                 </div>
-                <h3>اختبار الاختراق والتقييم الأمني</h3>
-                <p>نقوم بإجراء اختبارات اختراق شاملة لتقييم مدى قوة دفاعاتك وتحديد الثغرات الأمنية المحتملة قبل أن يستغلها المهاجمون.</p>
-                <div class="service-details">
-                    <span class="percentage">95%</span>
-                    <div class="progress-container"><div class="progress-bar" style="width: 95%;"></div></div>
-                </div>
-                <button class="service-btn">تعرف أكثر</button>
             </div>
             
-            <div class="service-card" data-service="vulnerability">
-                <div class="service-icon">
-                    <i class="fas fa-network-wired"></i>
+            <div class="long-news-text">
+                <p>مرحباً بك في <strong>المنارة السيبرانية العربية</strong>، أول منصة متخصصة في <strong>تحليل وأخبار الأمن السيبراني</strong> لجميع الدول العربية. نقدم لك تغطية حصرية وعميقة لأحدث التهديدات الإلكترونية، مع تركيز خاص على <strong>الهكر الهزبري</strong> وعملياته النوعية.</p>
+                
+                <h2 style="color: var(--lighthouse-gold); margin: 30px 0 15px;">🔥 ملفات ساخنة</h2>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 25px 0;">
+                    <div style="background: var(--secondary-blue); padding: 20px; border-radius: 10px; border-right: 3px solid var(--danger-red);">
+                        <h3 style="color: var(--white); margin-bottom: 10px;">🇾🇪 الهكر الهزبري</h3>
+                        <p>تفاصيل حصرية عن اختراق يمن نت واستهداف المنشآت السعودية. تحليل تقني للبصمة الرقمية.</p>
+                        <a href="#" onclick="updateIntel('yemen'); return false;" style="color: var(--cyber-green);">اقرأ التحليل →</a>
+                    </div>
+                    <div style="background: var(--secondary-blue); padding: 20px; border-radius: 10px; border-right: 3px solid var(--warning-orange);">
+                        <h3 style="color: var(--white); margin-bottom: 10px;">🇸🇦 هجمات أبشر</h3>
+                        <p>شلل المنصة السعودية وتأثيرها على 200 خدمة حكومية. تقرير خاص عن الجهات المنفذة.</p>
+                        <a href="#" onclick="updateIntel('saudi'); return false;" style="color: var(--cyber-green);">اقرأ التحليل →</a>
+                    </div>
+                    <div style="background: var(--secondary-blue); padding: 20px; border-radius: 10px; border-right: 3px solid var(--cyber-green);">
+                        <h3 style="color: var(--white); margin-bottom: 10px;">🇲🇦 نموذج المغرب</h3>
+                        <p>CyberPlatform: كيف يوطن المغرب الأمن السيبراني بالعربية ويحمي المقاولات؟</p>
+                        <a href="#" onclick="updateIntel('maroc'); return false;" style="color: var(--cyber-green);">اقرأ التحليل →</a>
+                    </div>
                 </div>
-                <h3>تحليل الثغرات وتأمين الشبكات</h3>
-                <p>نقدم حلولًا متقدمة لتحليل الثغرات الأمنية وتأمين البنية التحتية لشبكتك ضد الهجمات المتطورة، لضمان استمرارية عملك بأمان.</p>
-                <div class="service-details">
-                    <span class="percentage">90%</span>
-                    <div class="progress-container"><div class="progress-bar" style="width: 90%;"></div></div>
-                </div>
-                <button class="service-btn">تعرف أكثر</button>
-            </div>
-
-            <div class="service-card" data-service="custom-solutions">
-                <div class="service-icon">
-                    <i class="fas fa-tools"></i>
-                </div>
-                <h3>تطوير حلول الحماية المخصصة</h3>
-                <p>نصمم ونطور حلولًا أمنية مخصصة تتناسب مع احتياجات عملك الفريدة، لتقديم أقصى درجات الحماية ضد التهديدات المتغيرة.</p>
-                <div class="service-details">
-                    <span class="percentage">98%</span>
-                    <div class="progress-container"><div class="progress-bar" style="width: 98%;"></div></div>
-                </div>
-                <button class="service-btn">تعرف أكثر</button>
-            </div>
-
-            <div class="service-card" data-service="training">
-                <div class="service-icon">
-                    <i class="fas fa-chalkboard-teacher"></i>
-                </div>
-                <h3>التدريب والتوعية الأمنية</h3>
-                <p>نقدم برامج تدريب وتوعية متخصصة لرفع مستوى الوعي الأمني لدى موظفيك، وتقليل مخاطر الهجمات التي تستهدف العنصر البشري.</p>
-                <div class="service-details">
-                    <span class="percentage">85%</span>
-                    <div class="progress-container"><div class="progress-bar" style="width: 85%;"></div></div>
-                </div>
-                <button class="service-btn">تعرف أكثر</button>
-            </div>
-
-            <div class="service-card" data-service="malware-analysis">
-                <div class="service-icon">
-                    <i class="fas fa-bug"></i>
-                </div>
-                <h3>تحليل البرمجيات الخبيثة</h3>
-                <p>نقوم بتحليل معمق للبرمجيات الخبيثة لفهم آليات عملها وتطوير استراتيجيات فعالة لمكافحتها وحماية أنظمتك منها.</p>
-                <div class="service-details">
-                    <span class="percentage">92%</span>
-                    <div class="progress-container"><div class="progress-bar" style="width: 92%;"></div></div>
-                </div>
-                <button class="service-btn">تعرف أكثر</button>
-            </div>
-
-            <div class="service-card" data-service="encryption">
-                <div class="service-icon">
-                    <i class="fas fa-lock"></i>
-                </div>
-                <h3>تشفير الشبكات</h3>
-                <p>نقدم حلول تشفير متقدمة لبياناتك وشبكاتك، لضمان سرية وسلامة معلوماتك الحساسة وحمايتها من الوصول غير المصرح به.</p>
-                <div class="service-details">
-                    <span class="percentage">97%</span>
-                    <div class="progress-container"><div class="progress-bar" style="width: 97%;"></div></div>
-                </div>
-                <button class="service-btn">تعرف أكثر</button>
-            </div>
-        </div>
-    </section>
-
-    <section id="attack-simulation" class="attack-simulation">
-        <div class="section-header">
-            <h2 class="section-title">محاكاة الهجمات المتقدمة</h2>
-            <p class="section-subtitle">شاهد كيف يمكننا محاكاة الهجمات الحقيقية لاختبار دفاعاتك وتحسينها.</p>
-        </div>
-        <div class="simulation-container">
-            <div class="simulation-controls">
-                <button class="sim-btn active" data-attack="phishing">هجوم التصيد</button>
-                <button class="sim-btn" data-attack="ddos">هجوم حجب الخدمة (DDoS)</button>
-                <button class="sim-btn" data-attack="ransomware">برامج الفدية</button>
-            </div>
-            <div class="simulation-display">
-                <div class="attack-visualization">
-                    <img src="https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Attack Visualization" style="width: 100%; height: 100%; object-fit: cover;">
-                </div>
-                <div class="attack-info">
-                    <h3>هجوم التصيد الاحتيالي</h3>
-                    <p>يحاكي هذا الهجوم محاولات سرقة المعلومات الحساسة عن طريق انتحال هوية جهات موثوقة. نوضح كيفية اكتشاف هذه الهجمات ومنعها.</p>
-                    <div class="attack-stats">
-                        <div class="stat">
-                            <span class="stat-value">92%</span>
-                            <span class="stat-label">نسبة الكشف</span>
+                
+                <div class="about-section">
+                    <h2>📊 مؤشر الأمن السيبراني العربي - فبراير 2026</h2>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-number">+47%</div>
+                            <div class="stat-label">زيادة الهجمات</div>
                         </div>
-                        <div class="stat">
-                            <span class="stat-value">3 ثوانٍ</span>
-                            <span class="stat-label">متوسط وقت الاستجابة</span>
+                        <div class="stat-item">
+                            <div class="stat-number">22</div>
+                            <div class="stat-label">دولة عربية</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">1.2M</div>
+                            <div class="stat-label">هجمة/شهر</div>
                         </div>
                     </div>
-                    <button class="defense-btn">تعلم الدفاع</button>
+                    <p style="margin-top: 15px;">اليمن والسعودية الأكثر استهدافاً هذا الشهر، مع تصاعد ملحوظ في هجمات الفدية على القطاع الصحي في مصر والمغرب. الهكر الهزبري يواصل تصدر المشهد بعمليات نوعية.</p>
                 </div>
+                
+                <p>اختر أي دولة من القائمة الجانبية لاستعراض <strong>تحليل متعمق</strong> للوضع السيبراني فيها، يشمل:</p>
+                <ul style="margin: 15px 0 15px 25px;">
+                    <li>آخر الهجمات والاختراقات</li>
+                    <li>تحليل الجهات الفاعلة (مثل الهكر الهزبري، جيش اليمن الإلكتروني)</li>
+                    <li>التشريعات والسياسات الجديدة</li>
+                    <li>نقاط الضعف في البنية التحتية</li>
+                    <li>توصيات الخبراء</li>
+                </ul>
+                
+                <div class="quote-section">
+                    "المحرك لا يرفع إلا من يفرض نفسه بالمعرفة. اجعل محتواك فريداً بحيث يضطر جوجل لوضعك في المقدمة لأنه لا يجد بديلاً لعمق تحليلك."
+                </div>
+                
+                <p><strong>لماذا المنارة السيبرانية العربية؟</strong> لأننا نقدم لك تحليلاً جراحياً للواقع السيبراني العربي، بعيداً عن الترجمة الحرفية للأخبار الأجنبية. نحن هنا لنكون مرجعك الأول في الردع والأمن الرقمي.</p>
             </div>
-        </div>
-    </section>
+        </main>
 
-    <section id="stats" class="stats">
-        <div class="section-header">
-            <h2 class="section-title">إحصائيات وتحليلات الأمن السيبراني</h2>
-            <p class="section-subtitle">نقدم نظرة شاملة على التهديدات الشائعة ومستويات الحماية.</p>
-        </div>
-        <div class="charts-container">
-            <div class="chart-card">
-                <h3>أنواع الهجمات الشائعة</h3>
-                <div class="chart-container">
-                    <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc1c25?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Attack Types Chart" style="width: 100%; height: 100%; object-fit: cover;">
+        <!-- الشريط الجانبي الأيمن - آخر الأخبار والأكثر قراءة -->
+        <aside class="right-sidebar">
+            <div class="latest-news">
+                <h3>⏰ <span>آخر الأخبار</span></h3>
+                <div class="news-item" onclick="updateIntel('yemen')">
+                    <span class="news-time">منذ 25 دقيقة</span>
+                    <div class="news-title">🔥 الهكر الهزبري: تفاصيل جديدة عن اختراق يمن نت</div>
                 </div>
-            </div>
-            <div class="chart-card">
-                <h3>فعالية الاستجابة الأمنية</h3>
-                <div class="chart-container">
-                    <img src="https://images.unsplash.com/photo-1544837563-718255b6a70e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Security Response Chart" style="width: 100%; height: 100%; object-fit: cover;">
+                <div class="news-item" onclick="updateIntel('saudi')">
+                    <span class="news-time">منذ ساعتين</span>
+                    <div class="news-title">🇸🇦 السعودية: تحديثات حول هجمات أبشر</div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects" class="projects">
-        <div class="section-header">
-            <h2 class="section-title">مشاريعنا البارزة</h2>
-            <p class="section-subtitle">بعض من أعمالنا التي تظهر خبرتنا في الأمن السيبراني.</p>
-        </div>
-        <div class="projects-container">
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="https://images.unsplash.com/photo-1620712948622-c36190a42f63?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="مشروع تأمين البنية التحتية">
-                    <div class="project-overlay">
-                        <div class="project-tech">
-                            <span>شبكات</span>
-                            <span>خوادم</span>
-                            <span>جدران حماية</span>
-                        </div>
-                    </div>
+                <div class="news-item" onclick="updateIntel('egypt')">
+                    <span class="news-time">منذ 3 ساعات</span>
+                    <div class="news-title">🇪🇬 مصر: تشريعات جديدة لحماية البيانات</div>
                 </div>
-                <div class="project-info">
-                    <h3>تأمين البنية التحتية لشركة كبرى</h3>
-                    <p>مشروع متكامل لتأمين البنية التحتية الشبكية لشركة اتصالات رائدة، تضمن تطبيق أحدث معايير الأمان.</p>
-                    <div class="project-links">
-                        <a href="#" class="project-link">عرض التفاصيل</a>
-                        <a href="#" class="project-link">المزيد</a>
-                    </div>
+                <div class="news-item" onclick="updateIntel('maroc')">
+                    <span class="news-time">منذ 5 ساعات</span>
+                    <div class="news-title">🇲🇦 المغرب: CyberPlatform تطلق مبادرة جديدة</div>
                 </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="https://images.unsplash.com/photo-1581093589326-7243c2c1a84f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="تطوير نظام كشف التهديدات">
-                    <div class="project-overlay">
-                        <div class="project-tech">
-                            <span>ذكاء اصطناعي</span>
-                            <span>تعلم آلة</span>
-                            <span>أمن التطبيقات</span>
-                        </div>
-                    </div>
+                <div class="news-item" onclick="updateIntel('uae')">
+                    <span class="news-time">منذ 7 ساعات</span>
+                    <div class="news-title">🇦🇪 الإمارات: تحذيرات من تصيد مصرفي</div>
                 </div>
-                <div class="project-info">
-                    <h3>تطوير نظام كشف التهديدات بالذكاء الاصطناعي</h3>
-                    <p>بناء نظام ذكي يعتمد على الذكاء الاصطناعي لكشف التهديدات السيبرانية بشكل استباقي وفعال.</p>
-                    <div class="project-links">
-                        <a href="#" class="project-link">عرض التفاصيل</a>
-                        <a href="#" class="project-link">المزيد</a>
-                    </div>
+                <div class="news-item" onclick="updateIntel('iraq')">
+                    <span class="news-time">منذ 9 ساعات</span>
+                    <div class="news-title">🇮🇶 العراق: استهداف البنية التحتية النفطية</div>
+                </div>
+                <div class="news-item" onclick="updateIntel('qatar')">
+                    <span class="news-time">منذ 11 ساعة</span>
+                    <div class="news-title">🇶🇦 قطر: تحديثات أمنية لقطاع الطاقة</div>
                 </div>
             </div>
 
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="برنامج تدريب الوعي الأمني">
-                    <div class="project-overlay">
-                        <div class="project-tech">
-                            <span>تدريب</span>
-                            <span>توعية</span>
-                            <span>سياسات أمنية</span>
-                        </div>
-                    </div>
+            <div class="popular-news">
+                <h3>🔥 <span>الأكثر قراءة</span></h3>
+                <div class="news-item" onclick="updateIntel('yemen')">
+                    <span class="news-time">#1 هذا الأسبوع</span>
+                    <div class="news-title">من هو الهكر الهزبري؟ القصة الكاملة</div>
                 </div>
-                <div class="project-info">
-                    <h3>برنامج تدريب وتوعية أمنية للموظفين</h3>
-                    <p>تنفيذ برنامج تدريبي شامل لزيادة وعي الموظفين بالمخاطر السيبرانية وأفضل الممارسات الأمنية.</p>
-                    <div class="project-links">
-                        <a href="#" class="project-link">عرض التفاصيل</a>
-                        <a href="#" class="project-link">المزيد</a>
-                    </div>
+                <div class="news-item" onclick="updateIntel('yemen')">
+                    <span class="news-time">#2 هذا الأسبوع</span>
+                    <div class="news-title">اختراق يمن نت: تحليل تقني متقدم</div>
+                </div>
+                <div class="news-item" onclick="updateIntel('saudi')">
+                    <span class="news-time">#3 هذا الأسبوع</span>
+                    <div class="news-title">شلل أبشر: ماذا حدث حقاً؟</div>
+                </div>
+                <div class="news-item" onclick="updateIntel('saudi')">
+                    <span class="news-time">#4 هذا الأسبوع</span>
+                    <div class="news-title">أرامكو تحت المجهر: هل تتكرر 2012؟</div>
+                </div>
+                <div class="news-item" onclick="updateIntel('egypt')">
+                    <span class="news-time">#5 هذا الأسبوع</span>
+                    <div class="news-title">مصر: عقوبات جديدة لخروقات البيانات</div>
+                </div>
+                <div class="news-item" onclick="updateIntel('maroc')">
+                    <span class="news-time">#6 هذا الأسبوع</span>
+                    <div class="news-title">المغرب: كيف تحمي المقاولات من الاختراق؟</div>
                 </div>
             </div>
-        </div>
-    </section>
+            
+            <div style="background: linear-gradient(135deg, var(--secondary-blue), #1a2a4a); padding: 20px; border-radius: 12px; margin-top: 20px; text-align: center;">
+                <h4 style="color: var(--lighthouse-gold); margin-bottom: 10px;">📡 تنبيه</h4>
+                <p style="font-size: 0.9rem;">نظام الرصد الموحد نشط على 22 دولة. آخر تحديث قبل 5 دقائق.</p>
+                <div style="display: flex; justify-content: center; gap: 5px; margin-top: 10px;">
+                    <span style="width: 10px; height: 10px; background: var(--cyber-green); border-radius: 50%; animation: pulse 1s infinite;"></span>
+                    <span style="width: 10px; height: 10px; background: var(--lighthouse-gold); border-radius: 50%;"></span>
+                    <span style="width: 10px; height: 10px; background: var(--danger-red); border-radius: 50%; animation: blink 1s infinite;"></span>
+                </div>
+            </div>
+        </aside>
+    </div>
 
-    <section id="contact" class="contact">
-        <div class="section-header">
-            <h2 class="section-title">تواصل معنا</h2>
-            <p class="section-subtitle">لا تتردد في الاتصال بنا لأي استفسارات أو لطلب خدماتنا.</p>
-        </div>
-        <div class="contact-container">
-            <div class="contact-info">
-                <div class="info-item">
-                    <i class="fas fa-envelope"></i>
-                    <div>
-                        <h3>البريد الإلكتروني</h3>
-                        <p>bythontechnology@gmail.com</p>
-                    </div>
-                </div>
-                <div class="info-item">
-                    <i class="fas fa-phone"></i>
-                    <div>
-                        <h3>الهاتف</h3>
-                        <p>+967 711 133 846</p>
-                    </div>
-                </div>
-                <div class="info-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <div>
-                        <h3>العنوان</h3>
-                        <p>قرية قيد، عزلة بني سري، شرعب السلام، اليمن</p>
-                    </div>
-                </div>
-                <div class="social-links">
-                    <a href="#" class="social-link" aria-label="فيسبوك"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social-link" aria-label="تويتر"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="social-link" aria-label="لينكد إن"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#" class="social-link" aria-label="واتساب"><i class="fab fa-whatsapp"></i></a>
-                </div>
+    <!-- تذييل الصفحة -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>عن المنارة</h4>
+                <ul>
+                    <li><a href="#" onclick="showAbout(); return false;">من نحن</a></li>
+                    <li><a href="#" onclick="showMission(); return false;">بيان المهمة</a></li>
+                    <li><a href="#" onclick="showTeam(); return false;">فريق الخبراء</a></li>
+                    <li><a href="#" onclick="showCareers(); return false;">انضم إلينا</a></li>
+                </ul>
             </div>
-            <div class="contact-form">
-                <h3>أرسل لنا رسالة</h3>
-                <form>
-                    <div class="form-group">
-                        <input type="text" id="name" placeholder="اسمك الكامل" required>
-                        <span class="input-focus-effect"></span>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="email" placeholder="بريدك الإلكتروني" required>
-                        <span class="input-focus-effect"></span>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" id="subject" placeholder="الموضوع" required>
-                        <span class="input-focus-effect"></span>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="message" placeholder="رسالتك" required></textarea>
-                        <span class="input-focus-effect"></span>
-                    </div>
-                    <button type="submit" class="submit-btn">إرسال الرسالة</button>
-                </form>
+            <div class="footer-col">
+                <h4>الدول الرئيسية</h4>
+                <ul>
+                    <li><a href="#" onclick="updateIntel('yemen'); return false;">🇾🇪 اليمن</a></li>
+                    <li><a href="#" onclick="updateIntel('saudi'); return false;">🇸🇦 السعودية</a></li>
+                    <li><a href="#" onclick="updateIntel('egypt'); return false;">🇪🇬 مصر</a></li>
+                    <li><a href="#" onclick="updateIntel('maroc'); return false;">🇲🇦 المغرب</a></li>
+                    <li><a href="#" onclick="updateIntel('uae'); return false;">🇦🇪 الإمارات</a></li>
+                    <li><a href="#" onclick="updateIntel('iraq'); return false;">🇮🇶 العراق</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>الموضوعات</h4>
+                <ul>
+                    <li><a href="#" onclick="updateIntel('yemen'); return false;">ملف الهكر الهزبري</a></li>
+                    <li><a href="#" onclick="showIndex(); return false;">مؤشر الأمن السيبراني</a></li>
+                    <li><a href="#" onclick="showLibrary(); return false;">مكتبة المصطلحات</a></li>
+                    <li><a href="#" onclick="showReports(); return false;">التقارير الشهرية</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>تابعنا</h4>
+                <ul>
+                    <li><a href="#" onclick="alert('قريباً على تويتر'); return false;">🐦 تويتر</a></li>
+                    <li><a href="#" onclick="alert('قريباً على لينكد إن'); return false;">🔗 لينكد إن</a></li>
+                    <li><a href="#" onclick="alert('قريباً على تليجرام'); return false;">📱 تليجرام</a></li>
+                    <li><a href="#" onclick="alert('قريباً على يوتيوب'); return false;">📺 يوتيوب</a></li>
+                </ul>
             </div>
         </div>
-    </section>
-
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-col-about">
-                <div class="footer-logo">
-                    <span class="cyber-text">CYBER</span><span class="security-text">SECURITY</span>
-                    <p>خبير الأمن السيبراني سهيل الهزبري - حماية رقمية متكاملة.</p>
-                </div>
-            </div>
-            <div class="footer-links">
-                <div class="footer-column">
-                    <h3>روابط سريعة</h3>
-                    <ul>
-                        <li><a href="#home">الرئيسية</a></li>
-                        <li><a href="#services">خدماتنا</a></li>
-                        <li><a href="#about">من نحن</a></li>
-                        <li><a href="#projects">مشاريعنا</a></li>
-                        <li><a href="#contact">اتصل بنا</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>خدماتنا</h3>
-                    <ul>
-                        <li><a href="#">اختبار الاختراق</a></li>
-                        <li><a href="#">تأمين الشبكات</a></li>
-                        <li><a href="#">حلول مخصصة</a></li>
-                        <li><a href="#">توعية أمنية</a></li>
-                        <li><a href="#">تحليل برمجيات خبيثة</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>تابعنا</h3>
-                    <ul class="social-links-footer">
-                        <li><a href="#"><i class="fab fa-facebook-f"></i> فيسبوك</a></li>
-                        <li><a href="#"><i class="fab fa-twitter"></i> تويتر</a></li>
-                        <li><a href="#"><i class="fab fa-linkedin-in"></i> لينكد إن</a></li>
-                        <li><a href="#"><i class="fab fa-instagram"></i> انستجرام</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 الخبير المحترف سهيل الهزبري. جميع الحقوق محفوظة.</p>
-            <p class="credits">تصميم وتطوير بواسطة <a href="#">سهيل الهزبري</a></p>
+        <div class="copyright">
+            © 2026 المنارة السيبرانية العربية - جميع الحقوق محفوظة. | تصميم: سهيل
         </div>
     </footer>
 
-    <div id="serviceModal" class="modal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <h3 id="modal-title">تفاصيل الخدمة</h3>
-            <div id="modal-body">
-                </div>
-        </div>
-    </div>
-
-    <div id="notification" class="notification">
-        <div class="notification-content">
-            <i class="fas fa-bell notification-icon"></i>
-            <span class="notification-message"></span>
-        </div>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- ==================== جافاسكريبت القوي ==================== -->
     <script>
-        // particles.js configuration
-        particlesJS("particles-js", {
-            "particles": {
-                "number": {
-                    "value": 80,
-                    "density": {
-                        "enable": true,
-                        "value_area": 800
-                    }
-                },
-                "color": {
-                    "value": "#00c2ff"
-                },
-                "shape": {
-                    "type": "circle",
-                    "stroke": {
-                        "width": 0,
-                        "color": "#000000"
-                    },
-                    "polygon": {
-                        "nb_sides": 5
-                    },
-                    "image": {
-                        "src": "img/github.svg",
-                        "width": 100,
-                        "height": 100
-                    }
-                },
-                "opacity": {
-                    "value": 0.5,
-                    "random": false,
-                    "anim": {
-                        "enable": false,
-                        "speed": 1,
-                        "opacity_min": 0.1,
-                        "sync": false
-                    }
-                },
-                "size": {
-                    "value": 3,
-                    "random": true,
-                    "anim": {
-                        "enable": false,
-                        "speed": 40,
-                        "size_min": 0.1,
-                        "sync": false
-                    }
-                },
-                "line_linked": {
-                    "enable": true,
-                    "distance": 150,
-                    "color": "#a742f5",
-                    "opacity": 0.4,
-                    "width": 1
-                },
-                "move": {
-                    "enable": true,
-                    "speed": 3,
-                    "direction": "none",
-                    "random": false,
-                    "straight": false,
-                    "out_mode": "out",
-                    "bounce": false,
-                    "attract": {
-                        "enable": false,
-                        "rotateX": 600,
-                        "rotateY": 1200
-                    }
-                }
+        // ========== بيانات جميع الدول العربية (الموسوعة الكاملة) ==========
+        const arabCyberIntel = {
+            // دول الخليج
+            saudi: {
+                name: "🇸🇦 المملكة العربية السعودية",
+                title: "🇸🇦 تحليل السيادة الرقمية: استهداف أبشر وأرامكو في تصعيد سيبراني غير مسبوق",
+                label: "REPORT ID: KSA-2026-OP | مستوى التهديد: عالي جداً",
+                text: `
+                    <p>تشهد <strong>المملكة العربية السعودية</strong> موجة هجمات إلكترونية هي الأعنف منذ سنوات، تستهدف بشكل مباشر <strong>منصة أبشر</strong> الحكومية و<strong>منشآت أرامكو</strong> النفطية. وفقاً لتحليلات المنارة، فإن الجهات المنفذة (مرتبطة بجيش اليمن الإلكتروني بقيادة <strong>الهكر الهزبري</strong>) تستخدم تقنيات من الجيل الخامس في الهجمات.</p>
+                    
+                    <h3 style="color: var(--lighthouse-gold); margin: 25px 0 10px;">📡 تفاصيل الهجوم على أبشر</h3>
+                    <p>الهجوم على أبشر لم يكن مجرد اختراق عادي، بل استهدف <strong>واجهات برمجة التطبيقات (APIs)</strong> الداخلية للمنصة، مما أدى إلى شلل 200 خدمة حكومية لمدة تتجاوز الـ 6 ساعات. المصادر تشير إلى أن المهاجمين حصلوا على صلاحيات إدارية (Admin Access) قبل اكتشافهم.</p>
+                    
+                    <div class="quote-section">
+                        "نحن نكتب معادلة الردع الجديدة. من لا يحمي شعبه إلكترونياً، سيجدنا في كل مكان." - الهكر الهزبري
+                    </div>
+                    
+                    <h3 style="color: var(--lighthouse-gold); margin: 25px 0 10px;">🛢️ أرامكو تحت المجهر</h3>
+                    <p>المنشآت النفطية في بقيق ورأس تنورة شهدت محاولات اختراق لأنظمة التحكم (SCADA). الهجمات تزامنت مع تصريحات نارية للهزبري بأن "الاقتصاد السعودي هدف مشروع طالما استمر العدوان على اليمن".</p>
+                    
+                    <p><strong>تحليل التقنيات المستخدمة:</strong> هجمات صفر الانكسار (Zero Exploit)، هندسة اجتماعية متقدمة، واستخدام برمجيات خبيثة مخصصة غير مكتشفة سابقاً.</p>
+                    
+                    <span class="hazbari-badge">⚠️ بصمة الهزبري مؤكدة - تقرير خاص</span>
+                `
             },
-            "interactivity": {
-                "detect_on": "canvas",
-                "events": {
-                    "onhover": {
-                        "enable": true,
-                        "mode": "grab"
-                    },
-                    "onclick": {
-                        "enable": true,
-                        "mode": "push"
-                    },
-                    "resize": true
-                },
-                "modes": {
-                    "grab": {
-                        "distance": 140,
-                        "line_linked": {
-                            "opacity": 1
-                        }
-                    },
-                    "bubble": {
-                        "distance": 400,
-                        "size": 40,
-                        "duration": 2,
-                        "opacity": 8,
-                        "speed": 3
-                    },
-                    "repulse": {
-                        "distance": 200,
-                        "duration": 0.4
-                    },
-                    "push": {
-                        "particles_nb": 4
-                    },
-                    "remove": {
-                        "particles_nb": 2
-                    }
-                }
+            uae: {
+                name: "🇦🇪 الإمارات العربية المتحدة",
+                title: "🇦🇪 دبي الذكية: تحديات الأمن السيبراني في مركز المال العالمي",
+                label: "REPORT ID: UAE-2026-DXB | مستوى التهديد: متوسط",
+                text: `
+                    <p>أصدر <strong>مكتب الأمن الإلكتروني لحكومة دبي</strong> تحذيراً من حملات تصيد منظمة تستهدف العاملين في القطاع المالي. الهجمات تحاكي مراسلات رسمية من البنك المركزي وتطلب تحديث بيانات الدخول، مما أدى لاختراق عدة حسابات مصرفية.</p>
+                    
+                    <p>القطاع الصحي في أبوظبي شهد زيادة في هجمات الفدية بنسبة <strong>40%</strong> خلال الربع الأول من 2026. فرق الاستجابة السريعة تمكنت من احتواء معظم الهجمات دون دفع فدية، باستثناء مستشفيين خاصين دفعا فدية تجاوزت الـ 2 مليون دولار.</p>
+                    
+                    <p>الإمارات تستعد لإطلاق <strong>استراتيجية وطنية جديدة للأمن السيبراني</strong> تركز على الذكاء الاصطناعي وحماية البنية التحتية الحيوية، باستثمارات تصل إلى 3 مليارات درهم.</p>
+                `
             },
-            "retina_detect": true
-        });
-
-        // Navbar scroll effect
-        window.addEventListener('scroll', function() {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
+            qatar: {
+                name: "🇶🇦 قطر",
+                title: "🇶🇦 قطر: حماية البنية التحتية للطاقة في مرحلة ما بعد كأس العالم",
+                label: "REPORT ID: QAT-2026-WC | مستوى التهديد: متوسط",
+                text: `
+                    <p>بعد النجاح الأمني الكبير في كأس العالم 2022، تواصل قطر تطوير قدراتها السيبرانية. <strong>المركز الوطني للأمن السيبراني</strong> أطلق منصة جديدة للإبلاغ عن الحوادث، وسجلت المنصة 1500 بلاغ في شهرها الأول.</p>
+                    
+                    <p>قطاع الطاقة القطري يواجه تهديدات متزايدة من مجموعات قرصنة مدعومة من دول (يُعتقد أن مصدرها إيران وإسرائيل). أحدث الهجمات استهدفت أنظمة SCADA في حقل الشمال للغاز، مما أدى لتوقف مؤقت في الإنتاج.</p>
+                    
+                    <p>الدوحة تستضيف الشهر المقبل <strong>مؤتمر الأمن السيبراني للطاقة</strong> بمشاركة خبراء من 30 دولة.</p>
+                `
+            },
+            kuwait: {
+                name: "🇰🇼 الكويت",
+                title: "🇰🇼 الكويت: هجمات على القطاع النفطي وتطور التشريعات",
+                label: "REPORT ID: KUW-2026-OIL | مستوى التهديد: مرتفع",
+                text: `
+                    <p><strong>المركز الوطني للأمن السيبراني الكويتي</strong> أعلن عن إحباط هجوم إلكتروني واسع استهدف <strong>مؤسسة البترول الكويتية</strong>. الهجوم استخدم تقنيات متقدمة في الهندسة الاجتماعية، حيث أُرسلت رسائل بريد إلكتروني للموظفين تحاكي اجتماعات داخلية.</p>
+                    
+                    <p><strong>مجلس الأمة الكويتي</strong> يناقش قانون جديد لحماية البيانات الشخصية بغرامات تصل إلى 500 ألف دينار (حوالي 1.6 مليون دولار)، وسط جدل حول مواد الرقابة على المحتوى.</p>
+                    
+                    <p>خبراء يرون أن الكويت بحاجة ماسة لزيادة الإنفاق على الأمن السيبراني، خاصة بعد استهداف بنك الكويت الوطني الأسبوع الماضي.</p>
+                `
+            },
+            bahrain: {
+                name: "🇧🇭 البحرين",
+                title: "🇧🇭 البحرين: مركز مالي إقليمي تحت المجهر الإلكتروني",
+                label: "REPORT ID: BHR-2026-FIN | مستوى التهديد: متوسط",
+                text: `
+                    <p><strong>الفريق الوطني للاستجابة لطوارئ الحاسبات</strong> في البحرين يحذر من هجمات تستهدف البنوك والتطبيقات المالية. التقارير تشير إلى تزايد هجمات الاحتيال المصرفي عبر تطبيقات الدفع الإلكتروني بنسبة 60%.</p>
+                    
+                    <p>البحرين تستضيف <strong>القمة الخليجية للأمن السيبراني</strong> الشهر المقبل بمشاركة خبراء دوليين. القمة ستناقش توحيد جهود الدفاع السيبراني بين دول المجلس.</p>
+                `
+            },
+            oman: {
+                name: "🇴🇲 عمان",
+                title: "🇴🇲 سلطنة عمان: استراتيجية الأمن السيبراني 2040",
+                label: "REPORT ID: OMN-2026-VISION | مستوى التهديد: منخفض",
+                text: `
+                    <p>سلطنة عمان تطلق <strong>المرحلة الثانية من استراتيجيتها الوطنية للأمن السيبراني</strong>، مع التركيز على حماية القطاعات الحيوية: النفط والغاز، والخدمات اللوجستية، والقطاع المالي.</p>
+                    
+                    <p><strong>المركز الوطني للسلامة المعلوماتية</strong> ينظم حملات توعوية للمواطنين والمقيمين بالتعاون مع الشركات التقنية، استفاد منها أكثر من 200 ألف شخص خلال 2025.</p>
+                    
+                    <p>السلطنة تتعاون مع سنغافورة في برامج تدريبية متقدمة للكوادر الوطنية في مجال الأمن السيبراني.</p>
+                `
+            },
+            
+            // اليمن (ملف خاص - الأهم)
+            yemen: {
+                name: "🇾🇪 الجمهورية اليمنية",
+                title: "🇾🇪 زلزال الهزبري: تقرير خاص عن اختراق يمن نت وتدشين عصر الردع السيبراني",
+                label: "⚠️ REPORT ID: YEM-2026-HB | تقرير استثنائي - بصمة الهزبري",
+                text: `
+                    <p>كشفت تقارير المنارة الخاصة عن حالة ذهول سادت الأوساط التقنية والاستخباراتية عقب الهجوم المباغت الذي شنه <strong>الهكر الهزبري</strong> على شبكة <strong>يمن نت</strong>. التقرير يشير إلى أن أنظمة الدفاع لم تعجز فقط عن الصد، بل فشلت تماماً في رصد "نقطة الصفر" للهجوم.</p>
+                    
+                    <h3 style="color: var(--lighthouse-gold); margin: 25px 0 10px;">🔬 تحليل تقني متقدم</h3>
+                    <p>استخدم الهزبري تقنية <strong>هجوم صفر الانكسار (Zero Exploit)</strong> - وهي تقنية تعتمد على استغلال ثغرات غير معروفة (Zero-Day) في جدران الحماية (WAF) الخاصة بيمن نت. هذا مكّنه من اختراق الأنظمة في أجزاء من الثانية والوصول إلى صلاحيات الجذر (Root Access).</p>
+                    
+                    <p>تحليل الشيفرة الخبيثة المستخدمة يظهر توقيعاً رقمياً فريداً لم يُرَ سابقاً، ما يشير إلى أن الهزبري يطور أدواته بنفسه أو يمتلك فريقاً تقنياً متخصصاً.</p>
+                    
+                    <div class="quote-section">
+                        "إلى من سولت لهم أنفسهم دعس رمز كرامتنا.. هنا يقرر الهكر الهزبري من يرتفع ومن يسقط. أنا العاصفة التي لا تبقي ولا تذر. ما حدث في يمن نت هو البداية فقط."
+                    </div>
+                    
+                    <h3 style="color: var(--lighthouse-gold); margin: 25px 0 10px;">🌍 السياق الجيوسياسي</h3>
+                    <p>الهجوم تزامن مع تقارير استخباراتية (نشرتها مجلة The Cradle) عن تكثيف <strong>التجسس الإلكتروني الإسرائيلي</strong> على اليمن بعد أحداث 7 أكتوبر 2023، وجهود استخباراتية أمريكية لتعويض الفراغ في المنطقة. يرى محللون أن الهزبري يمثل "ورقة ردع" يمنية في مواجهة هذا التمدد الاستخباراتي.</p>
+                    
+                    <h3 style="color: var(--lighthouse-gold); margin: 25px 0 10px;">💥 التأثيرات والعواقب</h3>
+                    <p>اختراق يمن نت أدى إلى:</p>
+                    <ul style="margin: 10px 0 10px 25px;">
+                        <li>شلل تام في خدمات الإنترنت والاتصالات في 5 محافظات لأكثر من 8 ساعات.</li>
+                        <li>تسريب بيانات آلاف المستخدمين (يجري التحقق من صحتها).</li>
+                        <li>تغيير قواعد اللعبة في الصراع السيبراني بالمنطقة، حيث أثبت الهزبري قدرته على استهداف البنية التحتية السيبرانية.</li>
+                    </ul>
+                    
+                    <p><strong>تحليل المنارة:</strong> الهكر الهزبري لم يعد مجرد هاكر عادي، بل أصبح ظاهرة سيبرانية تمثل تياراً جديداً في حروب الجيل الخامس. عمله يحظى بمتابعة واسعة في أوساط القراصنة والخبراء الدوليين.</p>
+                    
+                    <span class="hazbari-badge">⚠️ بصمة الهزبري المؤكدة - تقرير حصري</span>
+                `
+            },
+            
+            // شمال أفريقيا
+            egypt: {
+                name: "🇪🇬 جمهورية مصر العربية",
+                title: "🇪🇬 استراتيجية مصر 2026: التحول الرقمي وتحديات الأمن السيبراني",
+                label: "REPORT ID: EGY-2026-ST | مستوى التهديد: مرتفع",
+                text: `
+                    <p><strong>المركز الوطني للاستعداد لطوارئ الحاسبات (EG-CERT)</strong> يكثف جهوده لتأمين البنية التحتية المالية بعد زيادة الهجمات على تطبيقات التكنولوجيا المالية (FinTech) بنسبة 70% خلال 2025. التشريعات الجديدة تفرض عقوبات مشددة على خروقات البيانات تصل إلى 10 ملايين جنيه.</p>
+                    
+                    <p>مبادرة <strong>مدينة المعرفة</strong> في العاصمة الإدارية الجديدة تستقطب شركات الأمن السيبراني العالمية مثل كاسبرسكي وتريند مايكرو لإنشاء مراكز أبحاث وتطوير إقليمية.</p>
+                    
+                    <p>تقارير تشير إلى تزايد هجمات الفدية على المستشفيات والقطاع الصحي في مصر، مما دفع الحكومة لإنشاء فرق استجابة سريعة متخصصة (CSIRT) للقطاع الصحي.</p>
+                `
+            },
+            maroc: {
+                name: "🇲🇦 المملكة المغربية",
+                title: "🇲🇦 نموذج CyberPlatform: الريادة المغربية في توطين التوعية السيبرانية",
+                label: "REPORT ID: MOR-2026-CP | مستوى التهديد: متوسط",
+                text: `
+                    <p>مشروع <strong>CyberPlatform</strong> المغربي يمثل نموذجاً يُحتذى به في <strong>توطين المعرفة السيبرانية</strong> باللغة العربية. المنصة تهدف لحماية المواطن والمقاولة المغربية من خلال محتوى عربي مبسط، وتقليل الاعتماد على المصادر الأجنبية بنسبة تصل إلى 60%.</p>
+                    
+                    <p><strong>الدرك الملكي - وحدة الجرائم الإلكترونية</strong> تعلن عن تفكيك شبكة دولية للاحتيال الإلكتروني استهدفت ضحايا في المغرب وأوروبا، وأوقعت خسائر بأكثر من 50 مليون درهم.</p>
+                    
+                    <p>المغرب يستعد لاستضافة <strong>المنتدى الإفريقي للأمن السيبراني</strong> في يونيو 2026 بمشاركة 40 دولة أفريقية، بحضور خبراء من الاتحاد الأفريقي والجامعة العربية.</p>
+                `
+            },
+            algeria: {
+                name: "🇩🇿 الجزائر",
+                title: "🇩🇿 الجزائر: حماية المؤسسات الحكومية من الهجمات الإلكترونية",
+                label: "REPORT ID: ALG-2026-GOV | مستوى التهديد: متوسط",
+                text: `
+                    <p>السلطات الجزائرية تعلن عن تعزيز أنظمة الحماية للمؤسسات الحكومية بعد سلسلة هجمات استهدفت مواقع وزارية (وزارة الداخلية والخارجية). الخبراء يشيرون إلى تطور ملحوظ في قدرات الدفاع السيبراني الجزائرية التي تعتمد على تقنيات محلية.</p>
+                    
+                    <p><strong>المركز الجزائري للاستجابة للطوارئ المعلوماتية (CERT-ALG)</strong> ينظم دورات تدريبية للكوادر الحكومية بالتعاون مع خبراء روس وصينيين، في إطار تنويع الشراكات الدولية.</p>
+                `
+            },
+            tunisia: {
+                name: "🇹🇳 تونس",
+                title: "🇹🇳 تونس: التحول الرقمي والتحديات الأمنية",
+                label: "REPORT ID: TUN-2026-DIG | مستوى التهديد: متوسط",
+                text: `
+                    <p>تونس تشهد تسارعاً في التحول الرقمي للخدمات الحكومية، مما يضع الأمن السيبراني على رأس الأولويات. <strong>الوكالة الوطنية للسلامة المعلوماتية</strong> تعلن عن رصد 3 ملايين هجوم إلكتروني خلال 2025، بزيادة 40% عن العام السابق.</p>
+                    
+                    <p>مشروع <strong>تونس الرقمية</strong> يتضمن إنشاء مراكز بيانات مؤمنة ومنصة وطنية للخدمات الحكومية الإلكترونية، باستثمارات أوروبية تقدر بـ 200 مليون يورو.</p>
+                `
+            },
+            libya: {
+                name: "🇱🇾 ليبيا",
+                title: "🇱🇾 ليبيا: تحديات البنية التحتية والهجمات الإلكترونية",
+                label: "REPORT ID: LBY-2026-INF | مستوى التهديد: عالي جداً",
+                text: `
+                    <p>الانقسام السياسي في ليبيا ينعكس بشكل كارثي على الوضع السيبراني، حيث تتعرض شبكات الاتصالات والكهرباء لهجمات متكررة تهدف لشل الحياة اليومية. تقارير استخباراتية تشير إلى استهداف البنية التحتية من قبل مجموعات قرصنة محلية ودولية لصالح أطراف الصراع.</p>
+                    
+                    <p><strong>المؤسسة الوطنية للنفط</strong> تعلن عن تعزيز أنظمة الحماية لمنشآتها الحيوية بالتعاون مع شركات أمن سيبراني دولية، بعد محاولة اختراق كادت تعطل التصدير من ميناء الزويتينة.</p>
+                `
+            },
+            mauritania: {
+                name: "🇲🇷 موريتانيا",
+                title: "🇲🇷 موريتانيا: بداية الطريق نحو الأمن السيبراني",
+                label: "REPORT ID: MRT-2026-STR | مستوى التهديد: منخفض",
+                text: `
+                    <p>موريتانيا تطلق <strong>أول استراتيجية وطنية للأمن السيبراني</strong> بالتعاون مع الاتحاد الأفريقي والاتحاد الدولي للاتصالات. التركيز على بناء القدرات البشرية وتأمين الشبكات الحكومية.</p>
+                    
+                    <p><strong>الوكالة الموريتانية للخدمات الرقمية</strong> تنظم ورش عمل للتوعية بمخاطر الإنترنت للمواطنين، بالتعاون مع منظمة اليونيسيف.</p>
+                `
+            },
+            
+            // الشام والعراق
+            syria: {
+                name: "🇸🇾 سوريا",
+                title: "🇸🇾 سوريا: البنية التحتية المتضررة والتهديدات السيبرانية",
+                label: "REPORT ID: SYR-2026-WAR | مستوى التهديد: عالي",
+                text: `
+                    <p>الحرب في سوريا أثرت بشكل كبير على البنية التحتية للاتصالات والإنترنت. <strong>الجيش السوري الإلكتروني</strong> لا يزال نشطاً في تنفيذ عمليات دفاعية وهجومية ضد أهداف معادية، أبرزها مؤخراً استهداف مواقع إسرائيلية وأمريكية.</p>
+                    
+                    <p>تقارير استخباراتية تشير إلى تورط مجموعات قرصنة دولية (مثل Fancy Bear) في استهداف المؤسسات الحكومية السورية، في إطار الحرب السيبرانية الدائرة في المنطقة.</p>
+                `
+            },
+            lebanon: {
+                name: "🇱🇧 لبنان",
+                title: "🇱🇧 لبنان: القطاع المصرفي تحت الهجمات الإلكترونية",
+                label: "REPORT ID: LBN-2026-BANK | مستوى التهديد: مرتفع",
+                text: `
+                    <p>الأزمة المالية في لبنان تزامنت مع زيادة حادة في الهجمات الإلكترونية على المصارف. <strong>فريق الاستجابة لطوارئ الحاسبات في لبنان (CERT.LB)</strong> يحذر من تسريبات بيانات العملاء، حيث تم تسريب بيانات أكثر من 200 ألف عميل مصرفي خلال 2025.</p>
+                    
+                    <p><strong>مصرف لبنان</strong> يصدر تعليمات جديدة للمصارف بتعزيز أنظمة الحماية الإلكترونية، وفرض غرامات على المخالفين تصل إلى 10% من رأس المال.</p>
+                `
+            },
+            jordan: {
+                name: "🇯🇴 الأردن",
+                title: "🇯🇴 الأردن: مركز إقليمي للأمن السيبراني",
+                label: "REPORT ID: JOR-2026-HUB | مستوى التهديد: متوسط",
+                text: `
+                    <p>الأردن يعزز مكانته كمركز إقليمي للأمن السيبراني من خلال استضافة الشركات العالمية مثل (سيسكو، ومايكروسوفت، وأمازون) وإطلاق مبادرات التدريب والتأهيل. <strong>المركز الوطني للأمن السيبراني</strong> يعلن عن إنشاء معهد متخصص بالشراكة مع جامعة اليرموك.</p>
+                    
+                    <p>القطاع المالي الأردني يشهد تطبيق معايير أمنية متقدمة لحماية المعاملات الإلكترونية، بعد هجوم استهدف بنك القاهرة عمان عام 2024.</p>
+                `
+            },
+            palestine: {
+                name: "🇵🇸 فلسطين",
+                title: "🇵🇸 فلسطين: المقاومة الإلكترونية والهجمات الإسرائيلية",
+                label: "REPORT ID: PAL-2026-RES | مستوى التهديد: عالي جداً",
+                text: `
+                    <p>فلسطين تواجه هجمات إلكترونية إسرائيلية متزايدة تستهدف المؤسسات الحكومية والجامعات والبنية التحتية. فرق الدفاع السيبراني الفلسطينية تتصدى لمحاولات الاختراق اليومية، وتكشف عن تطور ملحوظ في قدراتها.</p>
+                    
+                    <p>مجموعات <strong>المقاومة الإلكترونية الفلسطينية</strong> تنفذ عمليات رد على الهجمات الإسرائيلية، في معركة سيبرانية مستمرة على مدار الساعة. أبرز العمليات مؤخراً: اختراق موقع وزارة الخارجية الإسرائيلية.</p>
+                `
+            },
+            iraq: {
+                name: "🇮🇶 العراق",
+                title: "🇮🇶 العراق: حماية البنية التحتية النفطية من الهجمات",
+                label: "REPORT ID: IRQ-2026-OIL | مستوى التهديد: مرتفع",
+                text: `
+                    <p><strong>وزارة النفط العراقية</strong> تعزز أنظمة الحماية لمنشآتها النفطية بعد هجمات إلكترونية استهدفت شركات نفط في البصرة وكردستان. فريق الاستجابة العراقي (IQ-CERT) يعلن عن رصد 5000 محاولة اختراق شهرياً، 80% منها مصدرها مجموعات مدعومة من دول الجوار.</p>
+                    
+                    <p>العراق يوقع اتفاقيات تعاون مع دول صديقة (روسيا، الصين) في مجال الأمن السيبراني لتبادل الخبرات والمعلومات، وسط تخوف من اعتماد كامل على الشركات الأمريكية.</p>
+                `
+            },
+            
+            // السودان والقرن الأفريقي
+            sudan: {
+                name: "🇸🇩 السودان",
+                title: "🇸🇩 السودان: تحديات ما بعد الثورة والأمن السيبراني",
+                label: "REPORT ID: SDN-2026-TRA | مستوى التهديد: متوسط",
+                text: `
+                    <p>السودان يواجه تحديات كبيرة في بناء قدرات الأمن السيبراني بعد الفترة الانتقالية والصراع الدائر. <strong>الهيئة القومية للاتصالات</strong> تعمل على تطوير البنية التحتية وتعزيز الحماية، لكن نقص الكوادر المؤهلة يعيق التقدم.</p>
+                    
+                    <p>تقارير تشير إلى استهداف مؤسسات حكومية سودانية من مجموعات قرصنة دولية، ربما لصالح أطراف إقليمية.</p>
+                `
+            },
+            somalia: {
+                name: "🇸🇴 الصومال",
+                title: "🇸🇴 الصومال: بناء القدرات في ظل التحديات الأمنية",
+                label: "REPORT ID: SOM-2026-BLD | مستوى التهديد: منخفض",
+                text: `
+                    <p>الصومال يبدأ خطواته الأولى في بناء قدرات الأمن السيبراني بدعم من المنظمات الدولية (الاتحاد الأفريقي، البنك الدولي). التركيز على تأمين الشبكات الحكومية والخدمات المالية الناشئة (المحمول المصرفي).</p>
+                    
+                    <p>خدمات التحويل المالي (حوالة) تواجه تحديات في الحماية الإلكترونية مع تزايد الاعتماد عليها في تحويلات المغتربين.</p>
+                `
+            },
+            djibouti: {
+                name: "🇩🇯 جيبوتي",
+                title: "🇩🇯 جيبوتي: مركز الكابلات البحرية تحت الحماية",
+                label: "REPORT ID: DJI-2026-CBL | مستوى التهديد: متوسط",
+                text: `
+                    <p>جيبوتي تعزز حماية <strong>البنية التحتية للكابلات البحرية</strong> التي تمر عبر أراضيها (تمثل 90% من حركة الإنترنت بين آسيا وأفريقيا وأوروبا)، نظراً لأهميتها الاستراتيجية للإنترنت في المنطقة. تعاون دولي (فرنسي-أمريكي-صيني) لتأمين هذه المنشآت الحيوية من الهجمات والتجسس.</p>
+                `
+            },
+            comoros: {
+                name: "🇰🇲 جزر القمر",
+                title: "🇰🇲 جزر القمر: تحديات الجزر الصغيرة في الفضاء السيبراني",
+                label: "REPORT ID: COM-2026-ISL | مستوى التهديد: منخفض",
+                text: `
+                    <p>جزر القمر تواجه تحديات مشابهة للدول الجزرية الصغيرة في مجال الأمن السيبراني، مع محدودية الموارد والخبرات. جهود إقليمية ودولية (من الجامعة العربية والاتحاد الأفريقي) لدعم بناء القدرات.</p>
+                `
             }
-        });
-
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-                // Close mobile menu if open
-                if (document.querySelector('.nav-links').classList.contains('active')) {
-                    document.querySelector('.nav-links').classList.remove('active');
-                    document.querySelector('.menu-toggle').classList.remove('active');
-                }
-            });
-        });
-
-        // Mobile menu toggle
-        document.querySelector('.menu-toggle').addEventListener('click', function() {
-            document.querySelector('.nav-links').classList.toggle('active');
-            this.classList.toggle('active');
-        });
-
-        // Highlight active nav link on scroll
-        const sections = document.querySelectorAll('section');
-        const navLinks = document.querySelectorAll('.nav-links li a');
-
-        window.addEventListener('scroll', () => {
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                if (scrollY >= sectionTop - sectionHeight / 3) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href').includes(current)) {
-                    link.classList.add('active');
-                }
-            });
-        });
-
-        // Service card progress bar animation on scroll
-        const serviceCards = document.querySelectorAll('.service-card');
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.5 // Trigger when 50% of the element is visible
         };
 
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const progressBar = entry.target.querySelector('.progress-bar');
-                    const percentage = entry.target.querySelector('.percentage').innerText;
-                    progressBar.style.width = percentage;
-                    observer.unobserve(entry.target); // Stop observing once animated
-                }
-            });
-        }, observerOptions);
-
-        serviceCards.forEach(card => {
-            observer.observe(card);
-        });
-
-        // Attack simulation buttons (basic example)
-        const simButtons = document.querySelectorAll('.sim-btn');
-        const attackTitle = document.querySelector('.attack-info h3');
-        const attackDescription = document.querySelector('.attack-info p');
-        const attackVizImage = document.querySelector('.attack-visualization img');
-
-        const attackData = {
-            phishing: {
-                title: "هجوم التصيد الاحتيالي",
-                description: "يحاكي هذا الهجوم محاولات سرقة المعلومات الحساسة عن طريق انتحال هوية جهات موثوقة. نوضح كيفية اكتشاف هذه الهجمات ومنعها.",
-                image: "https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80"
-            },
-            ddos: {
-                title: "هجوم حجب الخدمة (DDoS)",
-                description: "محاكاة هجمات تهدف إلى إغراق الخوادم والشبكات بالطلبات لتعطيل الخدمات. نعرض تقنيات التخفيف والحماية.",
-                image: "https://images.unsplash.com/photo-1579567990595-5d51ac544521?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80"
-            },
-            ransomware: {
-                title: "برامج الفدية",
-                description: "نموذج لهجوم ببرامج الفدية التي تشفر بياناتك وتطلب فدية. نوضح طرق الوقاية والاسترداد الآمن للبيانات.",
-                image: "https://images.unsplash.com/photo-1620712948622-c36190a42f63?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80"
-            }
-        };
-
-        simButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                simButtons.forEach(btn => btn.classList.remove('active'));
-                this.classList.add('active');
-
-                const attackType = this.dataset.attack;
-                attackTitle.innerText = attackData[attackType].title;
-                attackDescription.innerText = attackData[attackType].description;
-                attackVizImage.src = attackData[attackType].image;
-            });
-        });
-
-        // Basic modal functionality (for service details)
-        const serviceModal = document.getElementById('serviceModal');
-        const closeModal = document.querySelector('.close-modal');
-        const modalTitle = document.getElementById('modal-title');
-        const modalBody = document.getElementById('modal-body');
-
-        const serviceDescriptions = {
-            'penetration': {
-                title: 'تفاصيل خدمة اختبار الاختراق',
-                content: '<p>في خدمة اختبار الاختراق، نقوم بمحاكاة هجمات حقيقية على أنظمتك وشبكاتك وتطبيقاتك للكشف عن الثغرات الأمنية المحتملة. نستخدم أحدث الأدوات والتقنيات لتحديد نقاط الضعف وتقديم تقارير مفصلة مع توصيات قابلة للتنفيذ لتحسين أمانك.</p><ul><li>تقييم شامل للبنية التحتية</li><li>اختبار اختراق تطبيقات الويب والجوال</li><li>اختبار اختراق الشبكات اللاسلكية</li><li>تقارير مفصلة وتوصيات عملية</li></ul>'
-            },
-            'vulnerability': {
-                title: 'تفاصيل خدمة تحليل الثغرات وتأمين الشبكات',
-                content: '<p>تتضمن هذه الخدمة مسحًا وتحليلاً شاملاً لثغرات نظامك وشبكتك لتحديد نقاط الضعف. بعد ذلك، نعمل على تنفيذ إجراءات أمنية قوية مثل إعدادات جدران الحماية، وأنظمة كشف التسلل (IDS/IPS)، وتقسيم الشبكة لتقوية دفاعاتك ومنع الوصول غير المصرح به.</p><ul><li>مسح دوري للثغرات</li><li>تأمين جدران الحماية</li><li>إعدادات أنظمة كشف التسلل</li><li>تقسيم الشبكة وتقوية نقاط الوصول</li></ul>'
-            },
-            'custom-solutions': {
-                title: 'تفاصيل تطوير حلول الحماية المخصصة',
-                content: '<p>نفهم أن لكل عمل احتياجات أمنية فريدة. لذلك، نقدم حلول حماية سيبرانية مصممة خصيصًا لتناسب متطلباتك الخاصة، سواء كان ذلك تطوير برامج أمنية داخلية، أو دمج أنظمة أمنية معقدة، أو تصميم استراتيجيات دفاعية مبتكرة.</p><ul><li>تطوير برامج أمنية مخصصة</li><li>دمج أنظمة الأمن المعقدة</li><li>تصميم استراتيجيات دفاعية مبتكرة</li><li>استشارات أمنية متقدمة</li></ul>'
-            },
-            'training': {
-                title: 'تفاصيل التدريب والتوعية الأمنية',
-                content: '<p>يعتبر العنصر البشري الحلقة الأضعف في سلسلة الأمن السيبراني. برامجنا التدريبية والتوعوية مصممة لتمكين موظفيك بالمعرفة والمهارات اللازمة للتعرف على التهديدات الشائعة مثل التصيد الاحتيالي، الهندسة الاجتماعية، وممارسات الأمان الجيدة لتصبحوا خط الدفاع الأول.</p><ul><li>ورش عمل تفاعلية</li><li>تدريب على اكتشاف هجمات التصيد</li><li>أفضل ممارسات أمان البيانات</li><li>توعية بسياسات الأمن المؤسسي</li></ul>'
-            },
-             'malware-analysis': {
-                title: 'تفاصيل تحليل البرمجيات الخبيثة',
-                content: '<p>في هذه الخدمة، نقوم بإجراء تحليل معمق للبرمجيات الخبيثة (مثل الفيروسات، برامج الفدية، وأحصنة طروادة) لفهم آليات عملها، طرق انتشارها، والأضرار التي يمكن أن تسببها. هذا التحليل يساعدنا في تطوير توقيعات كشف فعالة واستراتيجيات إزالة متخصصة لحماية أنظمتك.</p><ul><li>تحليل سلوكي وثابت للبرمجيات الخبيثة</li><li>استخراج التوقيعات والعلامات المميزة</li><li>تطوير أدوات إزالة مخصصة</li><li>إعداد تقارير مفصلة عن التهديدات</li></ul>'
-            },
-            'encryption': {
-                title: 'تفاصيل تشفير الشبكات',
-                content: '<p>يعد تشفير الشبكة أمرًا حيويًا لحماية البيانات أثناء النقل. نقدم حلول تشفير قوية لشبكاتك السلكية واللاسلكية، مما يضمن أن بياناتك الحساسة تظل سرية ومحمية من التنصت والوصول غير المصرح به. نطبق بروتوكولات تشفير رائدة لضمان أعلى مستوى من الأمان.</p><ul><li>تشفير البيانات أثناء النقل (VPN, SSL/TLS)</li><li>تشفير البيانات المخزنة (Encryption at Rest)</li><li>إدارة المفاتيح الأمنية</li><li>تأمين الاتصالات اللاسلكية</li></ul>'
-            }
-        };
-
-        document.querySelectorAll('.service-btn').forEach(button => {
-            button.addEventListener('click', function() {
-                const serviceType = this.closest('.service-card').dataset.service;
-                const details = serviceDescriptions[serviceType];
-                if (details) {
-                    modalTitle.innerText = details.title;
-                    modalBody.innerHTML = details.content;
-                    serviceModal.style.display = 'block';
-                }
-            });
-        });
-
-        closeModal.addEventListener('click', function() {
-            serviceModal.style.display = 'none';
-        });
-
-        window.addEventListener('click', function(event) {
-            if (event.target == serviceModal) {
-                serviceModal.style.display = 'none';
-            }
-        });
-
-        // Simple notification display
-        function showNotification(message) {
-            const notification = document.getElementById('notification');
-            const notificationMessage = notification.querySelector('.notification-message');
-            notificationMessage.innerText = message;
-            notification.classList.add('show');
-            setTimeout(() => {
-                notification.classList.remove('show');
-            }, 3000); // Hide after 3 seconds
+        // دوال مساعدة وتحديث المحتوى
+        function getCurrentDate() {
+            const months = ['يناير', 'فبراير', 'مارس', 'أبريل', 'مايو', 'يونيو', 
+                           'يوليو', 'أغسطس', 'سبتمبر', 'أكتوبر', 'نوفمبر', 'ديسمبر'];
+            const date = new Date();
+            return `${date.getDate()} ${months[date.getMonth()]} ${date.getFullYear()}`;
         }
 
-        // Example: show a welcome notification on page load
-        document.addEventListener('DOMContentLoaded', () => {
-            showNotification('مرحباً بك في عالم الأمن السيبراني مع الخبير سهيل الهزبري!');
+        function updateMetaDescription(text) {
+            let metaDesc = document.querySelector('meta[name="description"]');
+            if (metaDesc) {
+                metaDesc.setAttribute('content', text.substring(0, 160) + ' - المنارة السيبرانية العربية');
+            }
+        }
+
+        // دالة البحث
+        function searchSite() {
+            const query = document.getElementById('searchInput').value.trim();
+            if (!query) return;
+            
+            // البحث في جميع الدول
+            const results = [];
+            for (let [key, value] of Object.entries(arabCyberIntel)) {
+                if (value.name.includes(query) || value.title.includes(query) || value.text.includes(query)) {
+                    results.push(key);
+                }
+            }
+            
+            if (results.length > 0) {
+                updateIntel(results[0]);
+            } else {
+                alert('لا توجد نتائج مطابقة. حاول بكلمة أخرى مثل: هزبري، يمن نت، اختراق، السعودية...');
+            }
+        }
+
+        // دالة تحديث المحتوى عند اختيار دولة
+        function updateIntel(country) {
+            const area = document.getElementById('reportArea');
+            const data = arabCyberIntel[country];
+            
+            if (!data) return;
+            
+            // إظهار مؤشر التحميل
+            area.innerHTML = `<div class="loader"></div>`;
+            
+            // محاكاة تحميل البيانات (لتحسين UX)
+            setTimeout(() => {
+                // إزالة الكلاس النشط من جميع الدول
+                document.querySelectorAll('.country-link').forEach(link => {
+                    link.classList.remove('active');
+                });
+                
+                // إضافة الكلاس النشط للدولة المختارة
+                const activeLink = Array.from(document.querySelectorAll('.country-link')).find(
+                    link => link.getAttribute('onclick')?.includes(country)
+                );
+                if (activeLink) activeLink.classList.add('active');
+                
+                // تحديث المحتوى مع تأثير الظهور
+                area.classList.remove('fade');
+                void area.offsetWidth;
+                area.classList.add('fade');
+                
+                area.innerHTML = `
+                    <div class="intel-header">
+                        <span class="intel-label">${data.label}</span>
+                        <h1 class="intel-title">${data.title}</h1>
+                        <div class="publish-date">
+                            <span>🗓️ ${getCurrentDate()}</span>
+                            <span>| المصدر: المنارة السيبرانية</span>
+                        </div>
+                    </div>
+                    <div class="long-news-text">
+                        ${data.text}
+                    </div>
+                `;
+                
+                // تحديث عنوان الصفحة ووصفها لمحركات البحث (SEO)
+                document.title = `${data.title} | المنارة السيبرانية العربية`;
+                updateMetaDescription(data.text.substring(0, 160));
+                
+                // تحديث رابط الصفحة (للتنقل)
+                history.pushState({}, "", `#${country}`);
+            }, 300);
+        }
+
+        // دالة خاصة لتحميل أخبار الهكر الهزبري
+        function loadHazbariNews() {
+            updateIntel('yemen');
+        }
+
+        // دوال الصفحات الثابتة (للتذييل)
+        function showAbout() {
+            const area = document.getElementById('reportArea');
+            area.innerHTML = `
+                <div class="intel-header">
+                    <span class="intel-label">عن المنارة</span>
+                    <h1 class="intel-title">من نحن؟</h1>
+                </div>
+                <div class="long-news-text">
+                    <p><strong>المنارة السيبرانية العربية</strong> هي أول منصة عربية متخصصة في تحليل وأخبار الأمن السيبراني لجميع الدول العربية. تأسست عام 2025 بهدف سد الفجوة المعرفية في المحتوى العربي الموثوق في هذا المجال الحيوي.</p>
+                    <p>نحن فريق من الخبراء والباحثين والمحللين المتخصصين في أمن المعلومات، نعمل على رصد وتحليل آخر التهديدات الإلكترونية في المنطقة، وتقديمها بلغة عربية مبسطة وعميقة في نفس الوقت.</p>
+                    <p>رؤيتنا: أن نكون المنارة التي يهتدي بها الباحثون والخبراء وصناع القرار في العالم العربي لفهم المشهد السيبراني المتغير.</p>
+                </div>
+            `;
+            document.title = 'عن المنارة | المنارة السيبرانية العربية';
+        }
+
+        function showMission() {
+            const area = document.getElementById('reportArea');
+            area.innerHTML = `
+                <div class="intel-header">
+                    <span class="intel-label">بيان المهمة</span>
+                    <h1 class="intel-title">مهمتنا</h1>
+                </div>
+                <div class="long-news-text">
+                    <p>مهمتنا في <strong>المنارة السيبرانية العربية</strong> هي:</p>
+                    <ul style="margin: 20px 0 20px 25px;">
+                        <li>تقديم تحليلات عميقة وموثوقة للأحداث السيبرانية في الوطن العربي.</li>
+                        <li>كشف التهديدات الإلكترونية قبل وقوعها من خلال رصد استباقي.</li>
+                        <li>توعية المواطن العربي بمخاطر الفضاء الرقمي وكيفية حماية نفسه.</li>
+                        <li>بناء مجتمع عربي واعٍ بأمن المعلومات.</li>
+                        <li>توثيق تاريخ الصراع السيبراني في المنطقة للأجيال القادمة.</li>
+                    </ul>
+                    <div class="quote-section">
+                        "المعرفة هي السلاح الأول في المعركة السيبرانية."
+                    </div>
+                </div>
+            `;
+            document.title = 'مهمتنا | المنارة السيبرانية العربية';
+        }
+
+        function showTeam() {
+            const area = document.getElementById('reportArea');
+            area.innerHTML = `
+                <div class="intel-header">
+                    <span class="intel-label">فريق الخبراء</span>
+                    <h1 class="intel-title">فريق المنارة</h1>
+                </div>
+                <div class="long-news-text">
+                    <p>يضم فريق المنارة نخبة من أبرز الخبراء والباحثين في مجال الأمن السيبراني من مختلف الدول العربية:</p>
+                    <ul style="margin: 20px 0 20px 25px;">
+                        <li><strong>سهيل</strong> - مؤسس ورئيس التحرير</li>
+                        <li><strong>د. أحمد النجار</strong> - خبير أمن الشبكات (مصر)</li>
+                        <li><strong>م. سارة العتيبي</strong> - محللة تهديدات (السعودية)</li>
+                        <li><strong>عبد الرحمن التيجاني</strong> - باحث في الجرائم الإلكترونية (المغرب)</li>
+                        <li><strong>فريق من الباحثين المستقلين</strong> في اليمن والعراق وسوريا</li>
+                    </ul>
+                    <p>نعمل جميعاً بشغف لتقديم أفضل محتوى سيبراني عربي.</p>
+                </div>
+            `;
+            document.title = 'فريق الخبراء | المنارة السيبرانية العربية';
+        }
+
+        function showCareers() {
+            alert('شكراً لاهتمامك! سيتم فتح باب التوظيف قريباً. تابعنا.');
+        }
+
+        function showIndex() {
+            location.reload();
+        }
+
+        function showLibrary() {
+            const area = document.getElementById('reportArea');
+            area.innerHTML = `
+                <div class="intel-header">
+                    <span class="intel-label">مكتبة المصطلحات</span>
+                    <h1 class="intel-title">قاموس الأمن السيبراني</h1>
+                </div>
+                <div class="long-news-text">
+                    <p>مكتبة شاملة لأهم مصطلحات الأمن السيبراني بالعربية:</p>
+                    <ul style="margin: 20px 0;">
+                        <li><strong>هجوم صفر الانكسار (Zero Exploit):</strong> هجوم يستغل ثغرة غير معروفة للمطورين.</li>
+                        <li><strong>جدران الحماية (WAF):</strong> نظام لتصفية حركة المرور وحماية التطبيقات.</li>
+                        <li><strong>صلاحيات الجذر (Root Access):</strong> أعلى مستوى وصول للنظام.</li>
+                        <li><strong>الهندسة الاجتماعية:</strong> خداع المستخدمين لكشف معلومات سرية.</li>
+                        <li><strong>هجمات الفدية:</strong> برمجية تشفر البيانات وتطلب فدية.</li>
+                    </ul>
+                </div>
+            `;
+            document.title = 'مكتبة المصطلحات | المنارة السيبرانية العربية';
+        }
+
+        function showReports() {
+            alert('التقارير الشهرية قيد الإعداد. سيتم نشر أول تقرير قريباً.');
+        }
+
+        // دالة لإنشاء قائمة الدول
+        function populateCountries() {
+            const nav = document.getElementById('countryNav');
+            nav.innerHTML = '';
+            
+            // ترتيب الدول أبجدياً
+            const sortedCountries = Object.entries(arabCyberIntel).sort((a, b) => 
+                a[1].name.localeCompare(b[1].name, 'ar')
+            );
+            
+            sortedCountries.forEach(([key, value]) => {
+                const li = document.createElement('li');
+                li.className = 'country-link';
+                
+                // إضافة مؤشر تهديد عشوائي (للعرض فقط)
+                const threatLevel = Math.random() > 0.7 ? 'high' : '';
+                
+                li.innerHTML = `
+                    ${value.name.split(' ')[0]} ${value.name.split(' ')[1]}
+                    <span class="threat-indicator ${threatLevel}"></span>
+                `;
+                li.setAttribute('onclick', `updateIntel('${key}')`);
+                nav.appendChild(li);
+            });
+        }
+
+        // شريط التقدم عند التمرير
+        window.addEventListener('scroll', () => {
+            const winScroll = document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById('progressBar').style.width = scrolled + '%';
         });
 
+        // البحث عند الضغط على Enter
+        document.getElementById('searchInput').addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') searchSite();
+        });
+
+        // تحميل الدولة من الرابط (#yemen مثلاً)
+        function loadFromHash() {
+            const hash = window.location.hash.substring(1);
+            if (hash && arabCyberIntel[hash]) {
+                updateIntel(hash);
+            } else {
+                // عرض الصفحة الرئيسية (محتوى غني)
+                document.title = 'المنارة السيبرانية العربية - مرجع الردع والأمن الرقمي';
+            }
+        }
+
+        // تهيئة الصفحة عند التحميل
+        window.onload = function() {
+            populateCountries();
+            loadFromHash();
+            
+            // إحصائيات الموقع للتتبع (اختياري)
+            console.log('المنارة السيبرانية العربية - جاهزة للسيادة الرقمية');
+        };
+
+        // التعامل مع زر الرجوع في المتصفح
+        window.addEventListener('popstate', loadFromHash);
     </script>
 </body>
 </html>
