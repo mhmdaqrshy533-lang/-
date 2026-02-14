@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://mhmdaqrshy533-lang.github.io/sitemap.xml
